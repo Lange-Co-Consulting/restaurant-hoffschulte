@@ -101,27 +101,30 @@ export default function HomePage() {
             sizes="100vw"
             className="object-cover object-center"
           />
-          {/* Großer Bottom-Fade - Bild bleibt oben klar sichtbar, unten saubere Lesbarkeit */}
-          <div className="absolute inset-x-0 bottom-0 h-[75%] bg-gradient-to-b from-transparent via-bg/55 to-bg" />
-          {/* Sanfter Links-Fade - Text-Spalte bekommt zusätzlichen Kontrast */}
-          <div className="absolute inset-y-0 left-0 w-[55%] bg-gradient-to-r from-bg/55 to-transparent" />
+          {/* Stärkerer Bottom-Fade — alles unter Mitte sichtbar abgedunkelt zur surface */}
+          <div className="absolute inset-x-0 bottom-0 h-[82%] bg-gradient-to-b from-transparent via-bg/78 to-bg" />
+          {/* Links-Fade — Text-Spalte sitzt auf nahezu solidem Hintergrund */}
+          <div className="absolute inset-y-0 left-0 w-[62%] bg-gradient-to-r from-bg/88 via-bg/55 to-transparent" />
         </div>
 
         <div className="relative flex-1 flex flex-col justify-end pt-28 md:pt-32 pb-12 md:pb-16">
           <div className="container-x">
             <Reveal>
-              <div className="flex items-center gap-3 mb-7 md:mb-10 flex-wrap [text-shadow:0_1px_8px_oklch(0.99_0_0_/_0.8)]">
-                <SectionEyebrow accent>Münster · Alter Postweg 53</SectionEyebrow>
-                <span className="index text-[0.85rem]">- seit sechs Generationen</span>
+              <div className="flex items-center gap-3 mb-7 md:mb-10 flex-wrap">
+                <span className="eyebrow inline-flex items-center gap-3 text-text font-bold">
+                  <span aria-hidden className="h-px w-7 bg-accent-deep" />
+                  Münster · Alter Postweg 53
+                </span>
+                <span className="font-display-italic text-accent-deep text-[0.95rem] font-medium">- seit sechs Generationen</span>
               </div>
             </Reveal>
 
-            <h1 className="font-display text-text leading-[0.96] tracking-[-0.035em] text-[clamp(2.6rem,9vw,8rem)] max-w-[14ch] [text-shadow:0_2px_28px_oklch(0.99_0_0_/_0.85),0_0_60px_oklch(0.99_0_0_/_0.4)]">
+            <h1 className="font-display text-text leading-[0.96] tracking-[-0.035em] text-[clamp(2.6rem,9vw,8rem)] max-w-[14ch]">
               <span className="block overflow-hidden pb-[0.04em]">
                 <HeadlineReveal delay={0.05}><span className="block">Restaurant.</span></HeadlineReveal>
               </span>
               <span className="block overflow-hidden pb-[0.04em]">
-                <HeadlineReveal delay={0.18}><span className="block font-display-italic text-accent">Biergarten.</span></HeadlineReveal>
+                <HeadlineReveal delay={0.18}><span className="block font-display-italic text-accent-deep">Biergarten.</span></HeadlineReveal>
               </span>
               <span className="block overflow-hidden pb-[0.04em]">
                 <HeadlineReveal delay={0.32}><span className="block">Hoffschulte.</span></HeadlineReveal>
@@ -130,14 +133,14 @@ export default function HomePage() {
 
             <div className="mt-10 md:mt-14 grid md:grid-cols-[1.3fr_auto] gap-8 md:gap-12 items-end">
               <Reveal delay={0.65}>
-                <p className="text-text text-[16px] md:text-[18px] leading-[1.65] max-w-xl font-medium [text-shadow:0_1px_12px_oklch(0.99_0_0_/_0.85)]">
+                <p className="text-text text-[16px] md:text-[18px] leading-[1.65] max-w-xl font-medium">
                   Westfälisches Landgasthaus am Rand von Münster. Frische, saisonale Küche
                   in jahrhundertealten Räumen. Draußen warten neunzig Jahre alte Platanen.
                 </p>
               </Reveal>
 
               <Reveal delay={0.8}>
-                <div className="flex flex-wrap gap-3 items-center">
+                <div className="flex flex-col sm:flex-row sm:flex-wrap gap-3 sm:items-center">
                   <CtaButton href={`tel:${site.phone.replace(/\s/g, "")}`} external>
                     Tisch reservieren
                   </CtaButton>

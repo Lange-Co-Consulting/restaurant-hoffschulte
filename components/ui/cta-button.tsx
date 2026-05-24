@@ -21,13 +21,13 @@ export function CtaButton({
   magnetic?: boolean;
 }) {
   const base =
-    "group/cta inline-flex items-center gap-3 text-[0.95rem] font-medium leading-none transition-all duration-300";
+    "group/cta inline-flex items-center justify-between sm:justify-start gap-3 text-[0.95rem] font-medium leading-none transition-all duration-300 min-h-[48px]";
   const styles: Record<Variant, string> = {
     primary:
       "bg-text text-bg pl-6 pr-2 py-2.5 rounded-full hover:bg-accent hover:text-bg",
     outline:
       "border border-text text-text pl-6 pr-2 py-2.5 rounded-full hover:bg-text hover:text-bg",
-    ghost: "text-text hover:text-accent text-[0.95rem] font-medium",
+    ghost: "text-text hover:text-accent text-[0.95rem] font-medium min-h-0",
   };
 
   const Inner = (
