@@ -28,7 +28,7 @@ export default function AusserHausPage() {
       <PageHero
         eyebrow="Außer-Haus"
         number="Kapitel 04"
-        title={<>Frisch zubereitet - <em className="font-display-italic text-accent">zu Hause genossen.</em></>}
+        title={<>Frisch zubereitet - <em className="font-display-italic text-accent-deep">zu Hause genossen.</em></>}
         intro="Wir kochen frisch, vakuumieren in Zwei-Personen-Portionen und schocken auf Wunsch. Eine schonende Technik zur Konservierung, ohne künstliche Zusätze."
         image="/photos/dish-8.jpg"
         imageAlt="Vakuumierte Portionen aus der Hoffschulte-Außer-Haus-Küche"
@@ -38,7 +38,7 @@ export default function AusserHausPage() {
         <div className="container-x">
           <SectionEyebrow accent>So funktioniert es</SectionEyebrow>
           <h2 className="h-section mt-4 max-w-3xl">
-            Vier Schritte - <em className="font-display-italic text-accent">vom Anruf bis zum Esstisch.</em>
+            Vier Schritte - <em className="font-display-italic text-accent-deep">vom Anruf bis zum Esstisch.</em>
           </h2>
           <StaggerGroup className="mt-12 grid md:grid-cols-4 gap-px bg-[color:var(--line)] border border-[color:var(--line)]">
             {steps.map((s) => (
@@ -57,7 +57,7 @@ export default function AusserHausPage() {
         <div className="container-x">
           <SectionEyebrow accent>Karte zum Mitnehmen</SectionEyebrow>
           <h2 className="h-section mt-4 max-w-3xl">
-            Klassiker aus unserer Küche - <em className="font-display-italic text-accent">für zwei.</em>
+            Klassiker aus unserer Küche - <em className="font-display-italic text-accent-deep">für zwei.</em>
           </h2>
 
           <div className="grid lg:grid-cols-[1fr_1.4fr_1fr] gap-12 md:gap-16 mt-14">
@@ -88,7 +88,7 @@ export default function AusserHausPage() {
           <Reveal>
             <SectionEyebrow accent>Bestellen</SectionEyebrow>
             <h2 className="h-section mt-4">
-              Drei Wege <em className="font-display-italic text-accent">zu uns.</em>
+              Drei Wege <em className="font-display-italic text-accent-deep">zu uns.</em>
             </h2>
             <ul className="mt-10 space-y-0.5 text-[15.5px]">
               <li className="py-5 border-b border-[color:var(--line)] flex items-baseline justify-between gap-6">

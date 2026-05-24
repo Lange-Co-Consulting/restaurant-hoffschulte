@@ -21,7 +21,7 @@ export default function DatenschutzPage() {
           <Block heading="1. Verantwortlicher">
             Verantwortlich für die Verarbeitung Ihrer personenbezogenen Daten
             ist Carsten Hoffschulte, {site.address.street}, {site.address.postal} {site.address.city}.
-            Kontakt: <a href={`mailto:${site.email}`} className="text-text hover:text-accent break-all">{site.email}</a>.
+            Kontakt: <a href={`mailto:${site.email}`} className="text-text hover:text-accent-deep break-all">{site.email}</a>.
           </Block>
           <Block heading="2. Erhebung und Speicherung">
             Wir erheben personenbezogene Daten ausschließlich dann, wenn Sie
@@ -42,7 +42,7 @@ export default function DatenschutzPage() {
           <Block heading="5. Karten">
             Auf dieser Website nutzen wir Karten von Google Maps. Beim Aufruf
             der entsprechenden Seiten werden Daten an Google übertragen.{" "}
-            <a href="https://policies.google.com/privacy" target="_blank" rel="noopener" className="text-text hover:text-accent">
+            <a href="https://policies.google.com/privacy" target="_blank" rel="noopener" className="text-text hover:text-accent-deep">
               policies.google.com/privacy
             </a>
           </Block>

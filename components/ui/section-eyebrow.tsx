@@ -17,10 +17,13 @@ export function SectionEyebrow({
         className,
       )}
     >
-      <span aria-hidden className={cn(
-        "h-px w-7",
-        accent ? "bg-accent" : "bg-[color:var(--line-strong)]",
-      )} />
+      <span
+        aria-hidden
+        className={cn(
+          "h-px w-7",
+          accent ? "bg-accent-deep" : "bg-[color:var(--line-strong)]",
+        )}
+      />
       {children}
     </span>
   );

@@ -25,7 +25,7 @@ export default function BiergartenPage() {
       <PageHero
         eyebrow="Biergarten"
         number="Kapitel 02"
-        title={<>Unter neunzig Jahre alten <em className="font-display-italic text-accent">Platanen.</em></>}
+        title={<>Unter neunzig Jahre alten <em className="font-display-italic text-accent-deep">Platanen.</em></>}
         intro="Nehmen Sie Platz unter unseren ca. 90 Jahre alten Platanen. Für ein ideales Blätterdach werden diese alle drei bis vier Jahre zurückgeschnitten. Im Sommer ein grüner Saal, ohne Wände."
         image="/photos/biergarten-classic-1.jpg"
         imageAlt="Biergarten unter Platanen - Tische auf Kies, Sonnenlicht durch das Blätterdach"
@@ -50,7 +50,7 @@ export default function BiergartenPage() {
           <Reveal>
             <SectionEyebrow accent>So einfach</SectionEyebrow>
             <h2 className="h-section mt-5">
-              Eine Reservierung. <em className="font-display-italic text-accent">Zwei Möglichkeiten.</em>
+              Eine Reservierung. <em className="font-display-italic text-accent-deep">Zwei Möglichkeiten.</em>
             </h2>
             <div className="mt-8 space-y-5 body-lead max-w-2xl">
               <p>
@@ -64,8 +64,8 @@ export default function BiergartenPage() {
                 heißesten Mittagsstunden kühlt und am Abend ein leichtes Rauschen
                 im Wind macht.
               </p>
-              <div className="pt-2 flex flex-wrap gap-3">
-                <CtaButton href="tel:+4925067462" external>02506 7462 - Tisch sichern</CtaButton>
+              <div className="pt-2 flex flex-col sm:flex-row sm:flex-wrap gap-3">
+                <CtaButton href="tel:+4925067462" external>Tisch sichern</CtaButton>
                 <CtaButton href="/kontakt" variant="outline">Anfrage schreiben</CtaButton>
               </div>
             </div>
@@ -84,23 +84,23 @@ export default function BiergartenPage() {
         <div className="container-x">
           <SectionEyebrow accent>Vom Fass</SectionEyebrow>
           <h2 className="h-section mt-5 max-w-3xl">
-            Vier Biere, <em className="font-display-italic text-accent">jedes mit Heimat.</em>
+            Vier Biere, <em className="font-display-italic text-accent-deep">jedes mit Heimat.</em>
           </h2>
 
-          <StaggerGroup className="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-[color:var(--line)] border border-[color:var(--line)]">
+          <StaggerGroup className="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-[color:var(--line)] border border-[color:var(--line)]">
             {beers.map((b, i) => (
               <StaggerItem key={b.name} className="bg-bg p-8 md:p-10 hover:bg-bg-2/60 transition-colors">
                 <span className="index">{String(i + 1).padStart(2, "0")}</span>
-                <h3 className="font-display text-text text-[1.8rem] mt-3 leading-[1.05] tracking-[-0.02em]">{b.name}</h3>
-                <p className="text-text-2 text-[14px] mt-1">{b.region}</p>
-                <p className="text-muted text-[12.5px] mt-4 label text-[0.6rem]">{b.note}</p>
+                <h3 className="h-card text-[1.75rem] mt-3">{b.name}</h3>
+                <p className="body-base text-[14px] mt-1">{b.region}</p>
+                <p className="eyebrow text-[0.6rem] mt-4 text-muted">{b.note}</p>
               </StaggerItem>
             ))}
           </StaggerGroup>
 
-          <p className="mt-10 text-text-2 text-[14px] max-w-2xl leading-relaxed">
+          <p className="mt-10 body-base max-w-2xl">
             Dazu Weine aus unserer Karte, Aperitifs, Kaffee aus der Münsteraner Rösterei,
-            sowie alkoholfreie Alternativen. Sprechen Sie uns an - wir empfehlen gern.
+            sowie alkoholfreie Alternativen. Sprechen Sie uns an, wir empfehlen gern.
           </p>
         </div>
       </section>

@@ -18,7 +18,7 @@ export default function UeberUnsPage() {
       <PageHero
         eyebrow="Über uns"
         number="Kapitel 06"
-        title={<>Sechs Generationen <em className="font-display-italic text-accent">unter einem Dach.</em></>}
+        title={<>Sechs Generationen <em className="font-display-italic text-accent-deep">unter einem Dach.</em></>}
         intro="Ein altes Bauernhaus, eine Familie, ein langer Atem. Seit 1814 bewirten wir am Alten Postweg unsere Gäste. Heute steht die sechste Generation am Herd."
         image="/photos/gebaeude-historic.jpg"
         imageAlt="Historische Aufnahme des Hoffschulte-Hauses"
@@ -31,7 +31,7 @@ export default function UeberUnsPage() {
           <Reveal>
             <SectionEyebrow accent>Unsere Geschichte</SectionEyebrow>
             <h2 className="h-section mt-4">
-              Vom Hof zur <em className="font-display-italic text-accent">Gastwirtschaft.</em>
+              Vom Hof zur <em className="font-display-italic text-accent-deep">Gastwirtschaft.</em>
             </h2>
 
             <div className="mt-7 space-y-5 body-lead max-w-lg">

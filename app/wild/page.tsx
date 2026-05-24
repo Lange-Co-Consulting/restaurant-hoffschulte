@@ -30,7 +30,7 @@ export default function WildPage() {
       <PageHero
         eyebrow="Wild · aus eigener Jagd"
         number="Kapitel 05"
-        title={<>Aus dem Wald in die <em className="font-display-italic text-accent">Pfanne.</em></>}
+        title={<>Aus dem Wald in die <em className="font-display-italic text-accent-deep">Pfanne.</em></>}
         intro="Wildfleisch ist gesund, regional und mager. Aus der freien Wildbahn - frei von Medikamenten, garantiert ohne künstliche Konservierungsmittel. Mehr als bio."
         image="/photos/dish-6.jpg"
         imageAlt="Wildterrine mit Brioche aus der Hoffschulte-Wildküche"
@@ -58,7 +58,7 @@ export default function WildPage() {
             </p>
             <p className="mt-6 body-lead max-w-md">
               Wir nennen das nicht „bio". Wir nennen es{" "}
-              <em className="not-italic text-accent font-medium">mehr als bio</em>.
+              <em className="not-italic text-accent-deep font-medium">mehr als bio</em>.
             </p>
           </Reveal>
         </div>
@@ -84,7 +84,7 @@ export default function WildPage() {
         <div className="container-x">
           <SectionEyebrow accent>Aktuelles Wild-Angebot</SectionEyebrow>
           <h2 className="h-section mt-5 max-w-3xl">
-            Eine Packung. Eine Beilage. <em className="font-display-italic text-accent">Ein Abend zu zweit.</em>
+            Eine Packung. Eine Beilage. <em className="font-display-italic text-accent-deep">Ein Abend zu zweit.</em>
           </h2>
           <p className="mt-6 text-text-2 text-[16px] max-w-2xl leading-relaxed">
             Alle Wildgerichte sind gegart und schockgefrostet. Eine schonende

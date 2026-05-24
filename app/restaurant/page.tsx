@@ -39,7 +39,7 @@ export default function RestaurantPage() {
       <PageHero
         eyebrow="Restaurant"
         number="Kapitel 01"
-        title={<>Frische in <em className="font-display-italic text-accent">alten Mauern.</em></>}
+        title={<>Frische in <em className="font-display-italic text-accent-deep">alten Mauern.</em></>}
         intro="In unseren jahrhundertealten, hellen Räumlichkeiten bieten wir eine zeitgemäße, saisonale Küche mit frischen, vorwiegend regionalen Produkten. Frischer Fisch oder selbst erlegtes Wild gehören genauso dazu wie westfälische Spezialitäten aus eigener Herstellung."
         image="/photos/raum-kaminraum.jpg"
         imageAlt="Der Kaminraum mit Kupfertheke und historischem Inventar"
@@ -70,7 +70,7 @@ export default function RestaurantPage() {
             <Reveal>
               <SectionEyebrow accent>Die Küche</SectionEyebrow>
               <h2 className="h-section mt-4">
-                Vier Sätze, <em className="font-display-italic text-accent">die jeden Teller halten.</em>
+                Vier Sätze, <em className="font-display-italic text-accent-deep">die jeden Teller halten.</em>
               </h2>
             </Reveal>
           </div>
@@ -149,7 +149,7 @@ export default function RestaurantPage() {
               <p className="body-lead max-w-xl">
                 Die aktuelle Karte unseres Hauses. Wir passen sie laufend an die Saison
                 und an das, was unsere Erzeuger heute liefern. Mit Allergien oder
-                besonderen Wünschen bitte kurz vorher anrufen - <a href="tel:+4925067462" className="text-accent hover:text-accent-deep">02506 7462</a>.
+                besonderen Wünschen bitte kurz vorher anrufen - <a href="tel:+4925067462" className="text-accent-deep hover:text-accent-deep">02506 7462</a>.
               </p>
             </Reveal>
           </div>
@@ -187,7 +187,7 @@ export default function RestaurantPage() {
         <div className="container-x">
           <SectionEyebrow accent>Aus der Küche</SectionEyebrow>
           <h2 className="h-section mt-4 mb-12 max-w-3xl">
-            Was wir <em className="font-display-italic text-accent">aufgetragen</em> haben.
+            Was wir <em className="font-display-italic text-accent-deep">aufgetragen</em> haben.
           </h2>
           <BentoGallery items={stations} />
         </div>

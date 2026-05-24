@@ -48,7 +48,7 @@ export default function RaeumePage() {
       <PageHero
         eyebrow="Räumlichkeiten"
         number="Kapitel 03"
-        title={<>Drei Räume. <em className="font-display-italic text-accent">Ein Anlass nach dem anderen.</em></>}
+        title={<>Drei Räume. <em className="font-display-italic text-accent-deep">Ein Anlass nach dem anderen.</em></>}
         intro="Vom Familienessen bis zur großen Hochzeit. Unsere drei Räume tragen unterschiedliche Stimmungen - wählen Sie den, der zu Ihrem Tag passt."
         image="/photos/raum-kaminraum.jpg"
         imageAlt="Kaminraum mit langen Tafeln und Kupfertheke"
@@ -146,7 +146,7 @@ export default function RaeumePage() {
         <div className="container-x text-center max-w-3xl mx-auto">
           <SectionEyebrow accent className="justify-center inline-flex">Anfrage</SectionEyebrow>
           <h2 className="h-display mt-5">
-            Erzählen Sie uns <em className="font-display-italic text-accent">vom Anlass.</em>
+            Erzählen Sie uns <em className="font-display-italic text-accent-deep">vom Anlass.</em>
           </h2>
           <p className="mt-6 body-lead">
             Datum, Personenzahl, Wünsche zur Karte und zum Ablauf - wir antworten

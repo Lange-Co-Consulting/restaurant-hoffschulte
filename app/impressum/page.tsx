@@ -26,9 +26,9 @@ export default function ImpressumPage() {
           </Block>
 
           <Block heading="Kontakt">
-            Telefon: <a href={`tel:${site.phone.replace(/\s/g, "")}`} className="text-text hover:text-accent">{site.phoneDisplay}</a><br />
+            Telefon: <a href={`tel:${site.phone.replace(/\s/g, "")}`} className="text-text hover:text-accent-deep">{site.phoneDisplay}</a><br />
             WhatsApp: {site.whatsappDisplay} (nicht telefonisch)<br />
-            E-Mail: <a href={`mailto:${site.email}`} className="text-text hover:text-accent break-all">{site.email}</a>
+            E-Mail: <a href={`mailto:${site.email}`} className="text-text hover:text-accent-deep break-all">{site.email}</a>
           </Block>
 
           <Block heading="Umsatzsteuer">
@@ -62,7 +62,7 @@ export default function ImpressumPage() {
           <Block heading="EU-Streitschlichtung">
             Die Europäische Kommission stellt eine Plattform zur
             Online-Streitbeilegung (OS) bereit:{" "}
-            <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener" className="text-text hover:text-accent">
+            <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener" className="text-text hover:text-accent-deep">
               ec.europa.eu/consumers/odr
             </a>
             . Wir sind weder bereit noch verpflichtet, an einem

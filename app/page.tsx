@@ -40,15 +40,17 @@ const principles = [
 
 const places = [
   {
+    eyebrow: "Restaurant",
     title: "Im Haus",
     body: "Frische, saisonale Küche in jahrhundertealten Räumen. Frischer Fisch, eigenes Wild, westfälische Spezialitäten aus eigener Herstellung.",
     href: "/restaurant",
     cta: "Zur Küche",
-    image: "/photos/restaurant-classic-2.jpg",
-    imageAlt: "Der Kaminraum - schwere Holzdecke, offener Kamin, gedeckte Tafel",
+    image: "/photos/raum-kaminraum.jpg",
+    imageAlt: "Der Kaminraum mit Kupfertheke, Holzbalken und gedeckten Tafeln",
   },
   {
-    title: "Im Biergarten",
+    eyebrow: "Biergarten",
+    title: "Im Freien",
     body: "Unter neunzig Jahre alten Platanen, vom Frühling bis spät in den Herbst. Reservierungen werden bei gutem Wetter automatisch nach draußen vergeben.",
     href: "/biergarten",
     cta: "Zum Biergarten",
@@ -56,12 +58,13 @@ const places = [
     imageAlt: "Biergarten unter alten Platanen mit gedeckten Tischen",
   },
   {
+    eyebrow: "Räumlichkeiten",
     title: "Für Anlässe",
-    body: "Fachwerkstube für bis zu 50, Kaminraum für bis zu 80, Beste Stube für 24 - drei Räume, drei Stimmungen.",
+    body: "Fachwerkstube für bis zu 50, Kaminraum für bis zu 80, Beste Stube für 24. Drei Räume, drei Stimmungen.",
     href: "/raeumlichkeiten",
     cta: "Zu den Räumen",
-    image: "/photos/biergarten-classic-2.jpg",
-    imageAlt: "Außenansicht des Restaurants - Fachwerk und Biergarten",
+    image: "/photos/raum-fachwerkstube.jpg",
+    imageAlt: "Fachwerkstube mit gedeckter Tafel, grünen Stühlen und großer Fensterfront",
   },
 ];
 
@@ -134,9 +137,12 @@ export default function HomePage() {
           </div>
         </div>
 
-        <div aria-hidden className="absolute bottom-5 right-6 md:right-10 hidden md:flex flex-col items-center gap-3">
-          <span className="eyebrow text-[0.6rem]">nach unten</span>
-          <ArrowDown size={14} strokeWidth={1.5} className="text-accent animate-bounce" />
+        <div
+          aria-hidden
+          className="absolute bottom-6 right-6 md:right-10 hidden md:flex flex-col items-center gap-3"
+        >
+          <span className="eyebrow text-[0.6rem] text-text-2">Scrollen</span>
+          <ArrowDown size={14} strokeWidth={1.5} className="text-accent-deep animate-bounce" />
         </div>
       </section>
 
@@ -154,10 +160,11 @@ export default function HomePage() {
             <SectionEyebrow accent>Willkommen</SectionEyebrow>
           </Reveal>
           <Reveal delay={0.15}>
-            <p className="font-display text-text text-[clamp(1.7rem,3.6vw,2.6rem)] leading-[1.18] tracking-[-0.022em] max-w-[28ch]">
-              Eine Hofstelle am Alten Postweg - gegründet von{" "}
-              <em className="font-display-italic">Josef Hoffschulte</em>, geführt heute in
-              sechster Generation von <em className="font-display-italic text-accent">Carsten Hoffschulte</em>.
+            <p className="font-display text-text text-[clamp(1.7rem,3.4vw,2.5rem)] leading-[1.2] tracking-[-0.022em] max-w-[28ch]">
+              Eine Hofstelle am Alten Postweg, gegründet von{" "}
+              <em className="font-display-italic">Josef Hoffschulte</em>. Heute in
+              sechster Generation geführt von{" "}
+              <em className="font-display-italic text-accent-deep">Carsten Hoffschulte</em>.
               Frische Küche, eigene Jagd, eigene Wurst.
             </p>
             <div className="mt-8">
@@ -202,12 +209,12 @@ export default function HomePage() {
                   <div>
                     <div className="flex items-center gap-3 mb-5">
                       <span className="index text-[1rem]">{String(i + 1).padStart(2, "0")}</span>
-                      <SectionEyebrow>{p.title === "Im Haus" ? "Restaurant" : p.title === "Im Biergarten" ? "Biergarten" : "Räumlichkeiten"}</SectionEyebrow>
+                      <SectionEyebrow accent>{p.eyebrow}</SectionEyebrow>
                     </div>
-                    <h3 className="h-card text-[clamp(1.8rem,3.5vw,2.4rem)]">
+                    <h3 className="h-display text-[clamp(2rem,4vw,2.8rem)]">
                       {p.title}
                     </h3>
-                    <p className="mt-6 text-text-2 text-[16px] leading-[1.7] max-w-xl">{p.body}</p>
+                    <p className="mt-6 body-lead max-w-xl">{p.body}</p>
                     <div className="mt-8">
                       <CtaButton href={p.href} variant="outline">{p.cta}</CtaButton>
                     </div>
@@ -318,10 +325,10 @@ export default function HomePage() {
                 </dt>
                 <dd className="text-text leading-[1.75]">
                   Freitag & Samstag<br />
-                  <span className="font-display-italic text-accent text-[1.15rem]">{site.hours.fridaySaturday}</span>
+                  <span className="font-display-italic text-accent-deep text-[1.15rem]">{site.hours.fridaySaturday}</span>
                   <br />
                   Sonntag & Feiertag<br />
-                  <span className="font-display-italic text-accent text-[1.15rem]">{site.hours.sundayHoliday}</span>
+                  <span className="font-display-italic text-accent-deep text-[1.15rem]">{site.hours.sundayHoliday}</span>
                   <br />
                   <span className="text-muted text-[13px]">{site.hours.note}</span>
                 </dd>
@@ -374,15 +381,15 @@ function TickerLine() {
   return (
     <div className="flex items-center gap-10 text-text-2 px-5 whitespace-nowrap">
       <span className="font-display-italic text-[1.5rem] md:text-[1.85rem]">Münsterland</span>
-      <span className="text-accent text-lg">✦</span>
+      <span className="text-accent-deep text-lg">✦</span>
       <span className="font-display-italic text-[1.5rem] md:text-[1.85rem]">Wild aus eigener Jagd</span>
-      <span className="text-accent text-lg">✦</span>
+      <span className="text-accent-deep text-lg">✦</span>
       <span className="font-display-italic text-[1.5rem] md:text-[1.85rem]">Frischeküche</span>
-      <span className="text-accent text-lg">✦</span>
+      <span className="text-accent-deep text-lg">✦</span>
       <span className="font-display-italic text-[1.5rem] md:text-[1.85rem]">Sechs Generationen</span>
-      <span className="text-accent text-lg">✦</span>
+      <span className="text-accent-deep text-lg">✦</span>
       <span className="font-display-italic text-[1.5rem] md:text-[1.85rem]">Biergarten unter Platanen</span>
-      <span className="text-accent text-lg">✦</span>
+      <span className="text-accent-deep text-lg">✦</span>
     </div>
   );
 }
