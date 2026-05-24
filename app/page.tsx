@@ -9,6 +9,7 @@ import { ValueRow } from "@/components/ui/value-row";
 import { ReviewCard } from "@/components/ui/review-card";
 import { DecorativeImage } from "@/components/ui/decorative-image";
 import { site } from "@/lib/site";
+import reviewsData from "@/content/reviews.json";
 
 const principles = [
   {
@@ -64,28 +65,7 @@ const places = [
   },
 ];
 
-const reviews = [
-  {
-    name: "Sandra",
-    body: "Sehr nette Bedienung und richtig gutes Essen.",
-    source: "Google",
-    date: "vor 6 Monaten",
-    rating: 5,
-  },
-  {
-    name: "Michele Schaarmann",
-    body: "Uriges Lokal mit herrlichem Biergarten.",
-    source: "Google",
-    date: "vor 9 Monaten",
-    rating: 5,
-  },
-  {
-    name: "Tripadvisor-Gast",
-    body: "Gehobene westfälische Küche. Der Chef und Junior-Chef Carsten verstehen ihr Handwerk - optisch wie kulinarisch hervorragend, perfekter Service.",
-    source: "Tripadvisor",
-    rating: 5,
-  },
-];
+const reviews = reviewsData.reviews;
 
 export default function HomePage() {
   return (

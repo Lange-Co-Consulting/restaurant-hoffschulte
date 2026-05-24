@@ -7,6 +7,7 @@ import { CtaButton } from "@/components/ui/cta-button";
 import { ValueRow } from "@/components/ui/value-row";
 import { BentoGallery } from "@/components/ui/bento-gallery";
 import { DecorativeImage } from "@/components/ui/decorative-image";
+import cardsData from "@/content/cards/speisekarte.json";
 
 export const metadata: Metadata = {
   title: "Restaurant - Zeitgemäße Frischeküche",
@@ -30,23 +31,7 @@ const stations = [
   { src: "/photos/raum-kaminraum.jpg", alt: "Blick in den Kaminraum", caption: "Im Haus" },
 ];
 
-const cards = [
-  {
-    title: "Suppen, Vorspeisen, Regionales",
-    image: "/photos/speisekarte-1.png",
-    alt: "Speisekarte Hoffschulte - Suppen, Vorspeisen und Regionales mit Preisen",
-  },
-  {
-    title: "Hauptgänge & Dessert",
-    image: "/photos/speisekarte-2.png",
-    alt: "Speisekarte Hoffschulte - Hauptgänge, Kindergerichte, Dessert mit Preisen",
-  },
-  {
-    title: "Empfehlungs- & Weinkarte",
-    image: "/photos/speisekarte-3.png",
-    alt: "Empfehlungsmenü und Weinempfehlung des Hauses Hoffschulte",
-  },
-];
+const cards = cardsData.cards;
 
 export default function RestaurantPage() {
   return (

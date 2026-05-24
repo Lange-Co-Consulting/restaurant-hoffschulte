@@ -1,0 +1,32 @@
+{
+  "soups": [
+    {
+      "name": "Rinderkraftbrühe mit Markklößchen",
+      "description": "400 ml · für 2 Portionen",
+      "price": "8 €",
+      "badges": []
+    },
+    {
+      "name": "Kürbiscremesuppe",
+      "description": "400 ml · für 2 Portionen",
+      "price": "8 €",
+      "badges": ["vegetarisch"]
+    }
+  ],
+  "mains": [
+    { "name": "Rinderrouladen", "description": "300 g Fleisch mit Sauce · für 2 Portionen", "price": "25 €", "badges": [] },
+    { "name": "Rindfleisch mit Zwiebelsauce", "description": "300 g mit Sauce · für 2 Portionen", "price": "25 €", "badges": [] },
+    { "name": "Geschmorter Rindertafelspitz", "description": "300 g mit Sauce · für 2 Portionen", "price": "30 €", "badges": [] },
+    { "name": "Schweinefilet mit Pfeffersauce", "description": "300 g mit Sauce · für 2 Portionen", "price": "30 €", "badges": [] },
+    { "name": "Maishähnchenbrust mit Curry-Chili-Sauce", "description": "300 g mit Sauce · für 2 Portionen", "price": "30 €", "badges": [] },
+    { "name": "Hirschbraten", "description": "Aus eigener Jagd · 300 g mit Sauce · für 2 Portionen", "price": "30 €", "badges": [] },
+    { "name": "Wildgulasch", "description": "Aus eigener Jagd · 300 g mit Sauce · für 2 Portionen", "price": "25 €", "badges": [] },
+    { "name": "Bauernente - Brust & Keule mit Orangensauce", "description": "Auf Vorbestellung · für 2 Portionen", "price": "auf Anfrage", "badges": [] }
+  ],
+  "sides": [
+    { "name": "Rotkohl", "description": "Füllgewicht 500 g", "price": "8 €", "badges": [] },
+    { "name": "Wirsing in Rahm", "description": "Füllgewicht 500 g", "price": "8 €", "badges": [] },
+    { "name": "Kartoffelgratin", "description": "Füllgewicht 500 g", "price": "8 €", "badges": [] },
+    { "name": "Kartoffelklöße", "description": "Hausgemacht", "price": "8 €", "badges": [] }
+  ]
+}

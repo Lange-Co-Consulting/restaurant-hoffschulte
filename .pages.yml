@@ -1,0 +1,141 @@
+# Pages CMS Konfiguration — Carstens Bearbeitungs-Oberfläche
+# Aufrufbar unter app.pagescms.org nach Login
+
+media:
+  input: public/photos
+  output: /photos
+
+content:
+  - name: hours
+    label: Öffnungszeiten
+    icon: clock
+    description: Anzeige im Footer und auf Startseite
+    type: file
+    path: content/hours.json
+    format: json
+    fields:
+      - name: fridaySaturday
+        label: Freitag & Samstag
+        type: string
+      - name: sundayHoliday
+        label: Sonntag & Feiertag
+        type: string
+      - name: note
+        label: Zusatzhinweis (optional)
+        type: string
+
+  - name: speisekarte
+    label: Speisekarte (Restaurant)
+    icon: utensils
+    description: Drei Bilder der Hauskarte. Neue Karten als Bild hochladen, Titel optional anpassen.
+    type: file
+    path: content/cards/speisekarte.json
+    format: json
+    fields:
+      - name: cards
+        label: Karten
+        type: object
+        list: true
+        fields:
+          - { name: title, label: Titel,    type: string }
+          - { name: image, label: Bild,     type: image }
+          - { name: alt,   label: Alt-Text (für Vorleser), type: string }
+
+  - name: event-menus
+    label: Menüvorschläge für Anlässe
+    icon: book-open
+    description: Vier Veranstaltungs-Menükarten - Familienmenü, Festmenü, Hochzeitsmenü, Buffet
+    type: file
+    path: content/cards/event-menus.json
+    format: json
+    fields:
+      - name: cards
+        label: Menükarten
+        type: object
+        list: true
+        fields:
+          - { name: title, label: Titel,    type: string }
+          - { name: note,  label: Untertitel/Preis-Hinweis, type: string }
+          - { name: image, label: Bild,     type: image }
+          - { name: alt,   label: Alt-Text (für Vorleser), type: string }
+
+  - name: ausser-haus
+    label: Außer-Haus-Karte
+    icon: shopping-bag
+    description: Suppen, Hauptgerichte und Beilagen für Abholung
+    type: file
+    path: content/menus/ausser-haus.json
+    format: json
+    fields:
+      - name: soups
+        label: Suppen
+        type: object
+        list: true
+        fields:
+          - { name: name,        label: Name,        type: string }
+          - { name: description, label: Beschreibung, type: string }
+          - { name: price,       label: Preis,        type: string }
+          - { name: badges,      label: Hinweise (z. B. vegetarisch), type: string, list: true }
+      - name: mains
+        label: Hauptgerichte
+        type: object
+        list: true
+        fields:
+          - { name: name,        label: Name,        type: string }
+          - { name: description, label: Beschreibung, type: string }
+          - { name: price,       label: Preis,        type: string }
+          - { name: badges,      label: Hinweise,     type: string, list: true }
+      - name: sides
+        label: Beilagen
+        type: object
+        list: true
+        fields:
+          - { name: name,        label: Name,        type: string }
+          - { name: description, label: Beschreibung, type: string }
+          - { name: price,       label: Preis,        type: string }
+          - { name: badges,      label: Hinweise,     type: string, list: true }
+
+  - name: wild
+    label: Wild-Karte
+    icon: leaf
+    description: Wildgerichte aus eigener Jagd + Beilagen
+    type: file
+    path: content/menus/wild.json
+    format: json
+    fields:
+      - name: wild
+        label: Wildgerichte
+        type: object
+        list: true
+        fields:
+          - { name: name,        label: Name,        type: string }
+          - { name: description, label: Beschreibung, type: string }
+          - { name: price,       label: Preis,        type: string }
+          - { name: badges,      label: Hinweise,     type: string, list: true }
+      - name: sides
+        label: Beilagen
+        type: object
+        list: true
+        fields:
+          - { name: name,        label: Name,        type: string }
+          - { name: description, label: Beschreibung, type: string }
+          - { name: price,       label: Preis,        type: string }
+
+  - name: reviews
+    label: Gäste-Bewertungen
+    icon: star
+    description: Auf der Startseite angezeigte Zitate
+    type: file
+    path: content/reviews.json
+    format: json
+    fields:
+      - name: reviews
+        label: Bewertungen
+        type: object
+        list: true
+        fields:
+          - { name: name,   label: Name des Gastes, type: string }
+          - { name: body,   label: Zitat,           type: text }
+          - { name: source, label: Quelle (z. B. Google), type: string }
+          - { name: date,   label: Datum (z. B. vor 6 Monaten), type: string }
+          - { name: rating, label: Sterne (1-5),    type: number, default: 5 }

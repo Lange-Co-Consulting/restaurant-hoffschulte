@@ -5,6 +5,7 @@ import { SectionEyebrow } from "@/components/ui/section-eyebrow";
 import { Reveal, StaggerGroup, StaggerItem } from "@/components/ui/reveal";
 import { CtaButton } from "@/components/ui/cta-button";
 import { Users } from "lucide-react";
+import eventData from "@/content/cards/event-menus.json";
 
 export const metadata: Metadata = {
   title: "Räumlichkeiten - Fachwerkstube, Kaminraum & Beste Stube",
@@ -39,32 +40,7 @@ const rooms = [
   },
 ];
 
-const eventMenuCards = [
-  {
-    title: "Menüs 1 – 3",
-    note: "Drei-Gang-Menüs · ab 46,50 €",
-    image: "/photos/menue-1-3.png",
-    alt: "Menükarte Hoffschulte mit Menü 1, 2 und 3 - Drei-Gang-Vorschläge",
-  },
-  {
-    title: "Menüs 4 – 6",
-    note: "Drei-Gang-Menüs · ab 52,00 €",
-    image: "/photos/menue-4-6.png",
-    alt: "Menükarte Hoffschulte mit Menü 4, 5 und 6 - Drei-Gang-Vorschläge",
-  },
-  {
-    title: "Menüs 7 – 8",
-    note: "Drei-Gang-Menüs · ab 52,00 €",
-    image: "/photos/menue-7-8.png",
-    alt: "Menükarte Hoffschulte mit Menü 7 und 8 - Drei-Gang-Vorschläge",
-  },
-  {
-    title: "Buffet",
-    note: "1 Suppe · 8 Vorspeisen · 3 Hauptgänge · 4 Desserts · 51,50 €",
-    image: "/photos/menue-buffet.png",
-    alt: "Buffet-Karte Hoffschulte mit Karotten-Currysuppe, Anti Pasti, Rinderbraten und weiteren Speisen",
-  },
-];
+const eventMenuCards = eventData.cards;
 
 export default function RaeumePage() {
   return (

@@ -5,6 +5,7 @@ import { MenuItem } from "@/components/ui/menu-item";
 import { PullQuote } from "@/components/ui/pull-quote";
 import { Reveal, StaggerGroup, StaggerItem } from "@/components/ui/reveal";
 import { CtaButton } from "@/components/ui/cta-button";
+import data from "@/content/menus/wild.json";
 
 export const metadata: Metadata = {
   title: "Wild - Aus eigener Jagd, mehr als bio",
@@ -20,20 +21,8 @@ const principles = [
   { n: "05", text: "Portioniert und vakuumverpackt." },
 ];
 
-const wildMenu = [
-  { name: "Wildschweinbraten mit Sauce", price: "30 €", description: "600 g (300 g Fleisch + Sauce) · für 2 Personen" },
-  { name: "Rehbraten mit Sauce", price: "30 €", description: "600 g (300 g Fleisch + Sauce) · für 2 Personen" },
-  { name: "Hirschbraten mit Sauce", price: "30 €", description: "600 g (300 g Fleisch + Sauce) · für 2 Personen" },
-  { name: "Wildgulasch", price: "20 €", description: "600 g · für 2 Personen" },
-  { name: "Hasenkeulenragout", price: "30 €", description: "600 g · für 2 Personen" },
-  { name: "Geschmorte Wildentenbrust mit Sauce", price: "30 €", description: "600 g · für 2 Personen" },
-];
-
-const sides = [
-  { name: "Rotkohl", price: "8 €", description: "Füllgewicht 500 g" },
-  { name: "Wirsing in Rahm", price: "8 €", description: "Füllgewicht 500 g" },
-  { name: "Essenz vom Jagdfasan", price: "8 €", description: "Füllgewicht 500 g" },
-];
+const wildMenu = data.wild;
+const sides = data.sides;
 
 export default function WildPage() {
   return (

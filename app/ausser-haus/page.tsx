@@ -5,6 +5,7 @@ import { MenuItem } from "@/components/ui/menu-item";
 import { Reveal, StaggerGroup, StaggerItem } from "@/components/ui/reveal";
 import { CtaButton } from "@/components/ui/cta-button";
 import { site } from "@/lib/site";
+import data from "@/content/menus/ausser-haus.json";
 
 export const metadata: Metadata = {
   title: "Außer-Haus - Frisch zubereitet, vakuumiert, abholbereit",
@@ -12,28 +13,7 @@ export const metadata: Metadata = {
     "Frisch zubereitet, in Zwei-Personen-Portionen vakuumiert, gekühlt oder gefrostet. Abholung samstags zwischen 15 und 18 Uhr.",
 };
 
-const soups = [
-  { name: "Rinderkraftbrühe mit Markklößchen", price: "8 €", description: "400 ml · für 2 Portionen" },
-  { name: "Kürbiscremesuppe", price: "8 €", description: "400 ml · für 2 Portionen", badges: ["vegetarisch"] },
-];
-
-const mains = [
-  { name: "Rinderrouladen", price: "25 €", description: "300 g Fleisch mit Sauce · für 2 Portionen" },
-  { name: "Rindfleisch mit Zwiebelsauce", price: "25 €", description: "300 g mit Sauce · für 2 Portionen" },
-  { name: "Geschmorter Rindertafelspitz", price: "30 €", description: "300 g mit Sauce · für 2 Portionen" },
-  { name: "Schweinefilet mit Pfeffersauce", price: "30 €", description: "300 g mit Sauce · für 2 Portionen" },
-  { name: "Maishähnchenbrust mit Curry-Chili-Sauce", price: "30 €", description: "300 g mit Sauce · für 2 Portionen" },
-  { name: "Hirschbraten", price: "30 €", description: "Aus eigener Jagd · 300 g mit Sauce · für 2 Portionen" },
-  { name: "Wildgulasch", price: "25 €", description: "Aus eigener Jagd · 300 g mit Sauce · für 2 Portionen" },
-  { name: "Bauernente - Brust & Keule mit Orangensauce", price: "auf Anfrage", description: "Auf Vorbestellung · für 2 Portionen" },
-];
-
-const sides = [
-  { name: "Rotkohl", price: "8 €", description: "Füllgewicht 500 g" },
-  { name: "Wirsing in Rahm", price: "8 €", description: "Füllgewicht 500 g" },
-  { name: "Kartoffelgratin", price: "8 €", description: "Füllgewicht 500 g" },
-  { name: "Kartoffelklöße", price: "8 €", description: "Hausgemacht" },
-];
+const { soups, mains, sides } = data;
 
 const steps = [
   { nr: "01", title: "Bestellen", body: "Telefon, WhatsApp oder per E-Mail. Mit Wunsch-Abholzeit am Samstag." },

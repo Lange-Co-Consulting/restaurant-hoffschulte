@@ -1,0 +1,15 @@
+{
+  "wild": [
+    { "name": "Wildschweinbraten mit Sauce", "description": "600 g (300 g Fleisch + Sauce) · für 2 Personen", "price": "30 €", "badges": [] },
+    { "name": "Rehbraten mit Sauce", "description": "600 g (300 g Fleisch + Sauce) · für 2 Personen", "price": "30 €", "badges": [] },
+    { "name": "Hirschbraten mit Sauce", "description": "600 g (300 g Fleisch + Sauce) · für 2 Personen", "price": "30 €", "badges": [] },
+    { "name": "Wildgulasch", "description": "600 g · für 2 Personen", "price": "20 €", "badges": [] },
+    { "name": "Hasenkeulenragout", "description": "600 g · für 2 Personen", "price": "30 €", "badges": [] },
+    { "name": "Geschmorte Wildentenbrust mit Sauce", "description": "600 g · für 2 Personen", "price": "30 €", "badges": [] }
+  ],
+  "sides": [
+    { "name": "Rotkohl", "description": "Füllgewicht 500 g", "price": "8 €", "badges": [] },
+    { "name": "Wirsing in Rahm", "description": "Füllgewicht 500 g", "price": "8 €", "badges": [] },
+    { "name": "Essenz vom Jagdfasan", "description": "Füllgewicht 500 g", "price": "8 €", "badges": [] }
+  ]
+}

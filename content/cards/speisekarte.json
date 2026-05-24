@@ -1,0 +1,19 @@
+{
+  "cards": [
+    {
+      "title": "Suppen, Vorspeisen, Regionales",
+      "image": "/photos/speisekarte-1.png",
+      "alt": "Speisekarte Hoffschulte - Suppen, Vorspeisen und Regionales mit Preisen"
+    },
+    {
+      "title": "Hauptgänge & Dessert",
+      "image": "/photos/speisekarte-2.png",
+      "alt": "Speisekarte Hoffschulte - Hauptgänge, Kindergerichte, Dessert mit Preisen"
+    },
+    {
+      "title": "Empfehlungs- & Weinkarte",
+      "image": "/photos/speisekarte-3.png",
+      "alt": "Empfehlungsmenü und Weinempfehlung des Hauses Hoffschulte"
+    }
+  ]
+}
