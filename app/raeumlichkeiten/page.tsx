@@ -1,0 +1,187 @@
+import type { Metadata } from "next";
+import Image from "next/image";
+import { PageHero } from "@/components/ui/page-hero";
+import { SectionEyebrow } from "@/components/ui/section-eyebrow";
+import { Reveal, StaggerGroup, StaggerItem } from "@/components/ui/reveal";
+import { CtaButton } from "@/components/ui/cta-button";
+import { Users } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Räumlichkeiten - Fachwerkstube, Kaminraum & Beste Stube",
+  description:
+    "Drei Räume mit Charakter - von der intimen Besten Stube bis zum Kaminraum für bis zu 80 Personen. Hochzeiten, Familienfeste, Empfänge. Mit Menüvorschlägen.",
+};
+
+const rooms = [
+  {
+    nr: "01",
+    name: "Fachwerkstube",
+    capacity: "bis 50 Personen",
+    body: "Der historische Hauptraum mit freigelegtem Fachwerk, Backsteinbogen und großer Fensterfront zum Garten. Geeignet für Geburtstage, Empfänge und Firmenessen.",
+    image: "/photos/raum-fachwerkstube.jpg",
+    imageAlt: "Fachwerkstube mit gedeckter langer Tafel, grünen Stühlen, Backsteinbogen und großer Fensterfront",
+  },
+  {
+    nr: "02",
+    name: "Kaminraum",
+    capacity: "bis 80 Personen",
+    body: "Größter Raum mit offenem Kamin, alter Kupfertheke, schweren Holzbalken und historischem Inventar. Klassisch für Hochzeiten, Konfirmationen und größere Familienfeste.",
+    image: "/photos/raum-kaminraum.jpg",
+    imageAlt: "Kaminraum mit Holzbalken, Kupfertheke und gedeckten Tischen",
+  },
+  {
+    nr: "03",
+    name: "Beste Stube",
+    capacity: "bis 24 Personen",
+    body: "Intim, holzgetäfelt, mit langer Tafel, Pendelleuchten und Perserteppich. Für besondere Anlässe im kleinen Kreis - Geburtstage, Firmenrunden, private Dinner.",
+    image: "/photos/raum-beste-stube.jpg",
+    imageAlt: "Beste Stube mit langer gedeckter Tafel, Pendelleuchten und Holzbalken",
+  },
+];
+
+const eventMenuCards = [
+  {
+    title: "Menüs 1 – 3",
+    note: "Drei-Gang-Menüs · ab 46,50 €",
+    image: "/photos/menue-1-3.png",
+    alt: "Menükarte Hoffschulte mit Menü 1, 2 und 3 - Drei-Gang-Vorschläge",
+  },
+  {
+    title: "Menüs 4 – 6",
+    note: "Drei-Gang-Menüs · ab 52,00 €",
+    image: "/photos/menue-4-6.png",
+    alt: "Menükarte Hoffschulte mit Menü 4, 5 und 6 - Drei-Gang-Vorschläge",
+  },
+  {
+    title: "Menüs 7 – 8",
+    note: "Drei-Gang-Menüs · ab 52,00 €",
+    image: "/photos/menue-7-8.png",
+    alt: "Menükarte Hoffschulte mit Menü 7 und 8 - Drei-Gang-Vorschläge",
+  },
+  {
+    title: "Buffet",
+    note: "1 Suppe · 8 Vorspeisen · 3 Hauptgänge · 4 Desserts · 51,50 €",
+    image: "/photos/menue-buffet.png",
+    alt: "Buffet-Karte Hoffschulte mit Karotten-Currysuppe, Anti Pasti, Rinderbraten und weiteren Speisen",
+  },
+];
+
+export default function RaeumePage() {
+  return (
+    <>
+      <PageHero
+        eyebrow="Räumlichkeiten"
+        number="Kapitel 03"
+        title={<>Drei Räume. <em className="font-display-italic text-accent">Ein Anlass nach dem anderen.</em></>}
+        intro="Vom Familienessen bis zur großen Hochzeit. Unsere drei Räume tragen unterschiedliche Stimmungen - wählen Sie den, der zu Ihrem Tag passt."
+        image="/photos/raum-kaminraum.jpg"
+        imageAlt="Kaminraum mit langen Tafeln und Kupfertheke"
+      />
+
+      <section className="py-20 md:py-32">
+        <div className="container-x space-y-24 md:space-y-32">
+          {rooms.map((r, i) => (
+            <Reveal key={r.name}>
+              <div className={`grid md:grid-cols-2 gap-10 md:gap-16 items-center ${i % 2 === 1 ? "md:[&>*:first-child]:order-2" : ""}`}>
+                <div className="relative aspect-[5/4] overflow-hidden bg-bg-3 vignette">
+                  <Image
+                    src={r.image}
+                    alt={r.imageAlt}
+                    fill
+                    quality={92}
+                    sizes="(min-width: 768px) 50vw, 100vw"
+                    className="object-cover"
+                  />
+                  <span aria-hidden className="absolute top-5 left-5 eyebrow text-[0.62rem] text-bg/95 bg-text/55 backdrop-blur-md px-3 py-1.5 rounded-full">
+                    {r.capacity}
+                  </span>
+                </div>
+                <div>
+                  <div className="flex items-center gap-3 mb-4">
+                    <span className="index">- {r.nr}</span>
+                    <SectionEyebrow accent>{r.capacity}</SectionEyebrow>
+                  </div>
+                  <h2 className="font-display text-text text-[clamp(2.4rem,5.4vw,4rem)] leading-[1.02] tracking-[-0.03em]">
+                    {r.name}
+                  </h2>
+                  <p className="mt-6 text-text-2 text-[16.5px] leading-[1.7] max-w-xl">{r.body}</p>
+                  <div className="mt-8 flex items-center gap-2 text-text-2 text-[13.5px] eyebrow text-[0.62rem]">
+                    <Users size={13} strokeWidth={1.6} />
+                    <span>{r.capacity}</span>
+                  </div>
+                </div>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+      </section>
+
+      {/* EVENT MENUS - als echte Menükarten-Bilder */}
+      <section className="py-20 md:py-32 bg-bg-2/40 border-y border-[color:var(--line)]">
+        <div className="container-x">
+          <div className="grid md:grid-cols-[1fr_1.4fr] gap-10 md:gap-16 mb-12 md:mb-14">
+            <Reveal>
+              <SectionEyebrow accent>Menüvorschläge für Anlässe</SectionEyebrow>
+              <h2 className="font-display text-text text-[clamp(2rem,4.6vw,3.4rem)] mt-4 leading-[1.05] tracking-[-0.025em]">
+                Unsere Karten - <em className="font-display-italic">individuell anpassbar.</em>
+              </h2>
+            </Reveal>
+            <Reveal delay={0.12}>
+              <p className="text-text-2 text-[15.5px] leading-[1.7] max-w-xl">
+                Eine Auswahl als Orientierung - vom Drei-Gang-Menü bis zum großen Buffet.
+                Jedes Menü sprechen wir mit Ihnen persönlich durch - saisonal angepasst,
+                Vorspeisen, Gänge und Beilagen nach Ihren Wünschen.
+              </p>
+            </Reveal>
+          </div>
+
+          <StaggerGroup className="grid md:grid-cols-2 gap-6 md:gap-8">
+            {eventMenuCards.map((m) => (
+              <StaggerItem key={m.title}>
+                <article className="group border border-[color:var(--line)] bg-bg overflow-hidden">
+                  <div className="relative aspect-[3/4] overflow-hidden bg-bg-2">
+                    <Image
+                      src={m.image}
+                      alt={m.alt}
+                      fill
+                      quality={92}
+                      sizes="(min-width: 768px) 50vw, 100vw"
+                      className="object-contain transition-transform duration-700 group-hover:scale-[1.02]"
+                    />
+                  </div>
+                  <div className="px-6 py-5 flex items-baseline justify-between gap-4 border-t border-[color:var(--line)]">
+                    <h3 className="font-display text-text text-[1.4rem] tracking-[-0.015em]">{m.title}</h3>
+                    <span className="text-text-2 text-[13.5px]">{m.note}</span>
+                  </div>
+                </article>
+              </StaggerItem>
+            ))}
+          </StaggerGroup>
+
+          <p className="mt-10 text-muted text-[13.5px] max-w-2xl">
+            Alle Menüs vegetarisch oder mit weiteren Gängen erweiterbar. Getränke und
+            Servicepauschale separat. Wir erstellen Ihnen gerne ein individuelles Angebot.
+          </p>
+        </div>
+      </section>
+
+      {/* INQUIRY CTA */}
+      <section className="py-20 md:py-32">
+        <div className="container-x text-center max-w-3xl mx-auto">
+          <SectionEyebrow accent className="justify-center inline-flex">Anfrage</SectionEyebrow>
+          <h2 className="font-display text-text text-[clamp(2.4rem,5.4vw,4rem)] mt-5 leading-[1.02] tracking-[-0.03em]">
+            Erzählen Sie uns <em className="font-display-italic text-accent">vom Anlass.</em>
+          </h2>
+          <p className="mt-6 text-text-2 text-[16px] md:text-[17px] leading-relaxed">
+            Datum, Personenzahl, Wünsche zur Karte und zum Ablauf - wir antworten
+            persönlich. Telefonisch direkt, schriftlich bis zum nächsten Tag.
+          </p>
+          <div className="mt-10 flex flex-wrap gap-3 justify-center">
+            <CtaButton href="tel:+4925067462" external>02506 7462</CtaButton>
+            <CtaButton href="/kontakt" variant="outline">Anfrageformular</CtaButton>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}

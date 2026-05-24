@@ -1,0 +1,438 @@
+import Image from "next/image";
+import Link from "next/link";
+import { MapPin, Clock, Phone, ArrowDown } from "lucide-react";
+import { CtaButton } from "@/components/ui/cta-button";
+import { Reveal, StaggerGroup, StaggerItem, HeadlineReveal } from "@/components/ui/reveal";
+import { SectionEyebrow } from "@/components/ui/section-eyebrow";
+import { Marquee } from "@/components/ui/marquee";
+import { ValueRow } from "@/components/ui/value-row";
+import { ReviewCard } from "@/components/ui/review-card";
+import { site } from "@/lib/site";
+
+const principles = [
+  {
+    n: "01",
+    label: "Regional",
+    title: "Was im Münsterland wächst, kommt zuerst auf den Teller.",
+    body: "Wir kaufen bei Erzeugern, die wir kennen. Wege bleiben kurz, Aromen voll.",
+  },
+  {
+    n: "02",
+    label: "Saisonal",
+    title: "Die Karte folgt dem Kalender, nicht der Mode.",
+    body: "Spargel im Mai, Pfifferlinge im Juli, Wild im Herbst, Gänse zur Adventszeit.",
+  },
+  {
+    n: "03",
+    label: "Selbst erlegt",
+    title: "Wild aus eigener Jagd - vom Revier in die Pfanne.",
+    body: "Carsten Hoffschulte ist seit 1994 Jäger. Reh, Hirsch, Hase, Wildschwein - waidgerecht.",
+  },
+  {
+    n: "04",
+    label: "Hausgemacht",
+    title: "Wurst, Sülzen, Pasteten - Rezepte über Generationen.",
+    body: "Westfälische Spezialitäten entstehen in unserer Küche. So wie früher, so wie immer.",
+  },
+];
+
+const places = [
+  {
+    title: "Im Haus",
+    body: "Frische, saisonale Küche in jahrhundertealten Räumen. Frischer Fisch, eigenes Wild, westfälische Spezialitäten aus eigener Herstellung.",
+    href: "/restaurant",
+    cta: "Zur Küche",
+    image: "/photos/restaurant-classic-2.jpg",
+    imageAlt: "Der Kaminraum - schwere Holzdecke, offener Kamin, gedeckte Tafel",
+  },
+  {
+    title: "Im Biergarten",
+    body: "Unter neunzig Jahre alten Platanen, vom Frühling bis spät in den Herbst. Reservierungen werden bei gutem Wetter automatisch nach draußen vergeben.",
+    href: "/biergarten",
+    cta: "Zum Biergarten",
+    image: "/photos/biergarten-classic-1.jpg",
+    imageAlt: "Biergarten unter alten Platanen mit gedeckten Tischen",
+  },
+  {
+    title: "Für Anlässe",
+    body: "Fachwerkstube für bis zu 50, Kaminraum für bis zu 80, Beste Stube für 24 - drei Räume, drei Stimmungen.",
+    href: "/raeumlichkeiten",
+    cta: "Zu den Räumen",
+    image: "/photos/biergarten-classic-2.jpg",
+    imageAlt: "Außenansicht des Restaurants - Fachwerk und Biergarten",
+  },
+];
+
+const reviews = [
+  {
+    name: "Sandra",
+    body: "Sehr nette Bedienung und richtig gutes Essen.",
+    source: "Google",
+    date: "vor 6 Monaten",
+    rating: 5,
+  },
+  {
+    name: "Michele Schaarmann",
+    body: "Uriges Lokal mit herrlichem Biergarten.",
+    source: "Google",
+    date: "vor 9 Monaten",
+    rating: 5,
+  },
+  {
+    name: "Tripadvisor-Gast",
+    body: "Gehobene westfälische Küche. Der Chef und Junior-Chef Carsten verstehen ihr Handwerk - optisch wie kulinarisch hervorragend, perfekter Service.",
+    source: "Tripadvisor",
+    rating: 5,
+  },
+];
+
+export default function HomePage() {
+  return (
+    <>
+      {/* ─────────────── HERO ─────────────── */}
+      <section className="relative min-h-[100dvh] flex flex-col overflow-hidden">
+        <div aria-hidden className="absolute inset-0">
+          <Image
+            src="/photos/biergarten-classic-2.jpg"
+            alt=""
+            fill
+            priority
+            quality={92}
+            sizes="100vw"
+            className="object-cover object-center"
+          />
+          {/* Großer Bottom-Fade - Bild bleibt oben klar sichtbar, unten saubere Lesbarkeit */}
+          <div className="absolute inset-x-0 bottom-0 h-[75%] bg-gradient-to-b from-transparent via-bg/55 to-bg" />
+          {/* Sanfter Links-Fade - Text-Spalte bekommt zusätzlichen Kontrast */}
+          <div className="absolute inset-y-0 left-0 w-[55%] bg-gradient-to-r from-bg/55 to-transparent" />
+        </div>
+
+        <div className="relative flex-1 flex flex-col justify-end pt-28 md:pt-32 pb-12 md:pb-16">
+          <div className="container-x">
+            <Reveal>
+              <div className="flex items-center gap-3 mb-7 md:mb-10 flex-wrap [text-shadow:0_1px_8px_oklch(0.99_0_0_/_0.8)]">
+                <SectionEyebrow accent>Münster · Alter Postweg 53</SectionEyebrow>
+                <span className="index text-[0.85rem]">- seit sechs Generationen</span>
+              </div>
+            </Reveal>
+
+            <h1 className="font-display text-text leading-[0.96] tracking-[-0.035em] text-[clamp(2.6rem,9vw,8rem)] max-w-[14ch] [text-shadow:0_2px_28px_oklch(0.99_0_0_/_0.85),0_0_60px_oklch(0.99_0_0_/_0.4)]">
+              <span className="block overflow-hidden pb-[0.04em]">
+                <HeadlineReveal delay={0.05}><span className="block">Restaurant.</span></HeadlineReveal>
+              </span>
+              <span className="block overflow-hidden pb-[0.04em]">
+                <HeadlineReveal delay={0.18}><span className="block font-display-italic text-accent">Biergarten.</span></HeadlineReveal>
+              </span>
+              <span className="block overflow-hidden pb-[0.04em]">
+                <HeadlineReveal delay={0.32}><span className="block">Hoffschulte.</span></HeadlineReveal>
+              </span>
+            </h1>
+
+            <div className="mt-10 md:mt-14 grid md:grid-cols-[1.3fr_auto] gap-8 md:gap-12 items-end">
+              <Reveal delay={0.65}>
+                <p className="text-text text-[16px] md:text-[18px] leading-[1.65] max-w-xl font-medium [text-shadow:0_1px_12px_oklch(0.99_0_0_/_0.85)]">
+                  Westfälisches Landgasthaus am Rand von Münster. Frische, saisonale Küche
+                  in jahrhundertealten Räumen. Draußen warten neunzig Jahre alte Platanen.
+                </p>
+              </Reveal>
+
+              <Reveal delay={0.8}>
+                <div className="flex flex-wrap gap-3 items-center">
+                  <CtaButton href={`tel:${site.phone.replace(/\s/g, "")}`} external>
+                    Tisch reservieren
+                  </CtaButton>
+                  <CtaButton href="/restaurant" variant="outline">
+                    Die Küche
+                  </CtaButton>
+                </div>
+              </Reveal>
+            </div>
+          </div>
+        </div>
+
+        <div aria-hidden className="absolute bottom-5 right-6 md:right-10 hidden md:flex flex-col items-center gap-3">
+          <span className="eyebrow text-[0.6rem]">nach unten</span>
+          <ArrowDown size={14} strokeWidth={1.5} className="text-accent animate-bounce" />
+        </div>
+      </section>
+
+      {/* ─────────────── TICKER ─────────────── */}
+      <Marquee className="border-y border-[color:var(--line)] py-5 bg-bg-2/60">
+        <TickerLine />
+        <TickerLine />
+      </Marquee>
+
+      {/* ─────────────── EINFÜHRUNG ─────────────── */}
+      <section className="py-20 md:py-32">
+        <div className="container-x grid md:grid-cols-[1fr_1.5fr] gap-10 md:gap-16 items-start">
+          <Reveal>
+            <SectionEyebrow accent>Willkommen</SectionEyebrow>
+          </Reveal>
+          <Reveal delay={0.15}>
+            <p className="font-display text-text text-[clamp(1.7rem,3.6vw,2.6rem)] leading-[1.18] tracking-[-0.022em] max-w-[28ch]">
+              Eine Hofstelle am Alten Postweg - gegründet von{" "}
+              <em className="font-display-italic">Josef Hoffschulte</em>, geführt heute in
+              sechster Generation von <em className="font-display-italic text-accent">Carsten Hoffschulte</em>.
+              Frische Küche, eigene Jagd, eigene Wurst.
+            </p>
+            <div className="mt-8">
+              <CtaButton href="/ueber-uns" variant="ghost">Unsere Geschichte</CtaButton>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* ─────────────── DREI BEREICHE (Zigzag) ─────────────── */}
+      <section className="py-20 md:py-28 border-t border-[color:var(--line)] bg-bg-2/40">
+        <div className="container-x">
+          <div className="grid md:grid-cols-[1fr_1.5fr] gap-10 md:gap-16 items-end mb-12 md:mb-16">
+            <Reveal>
+              <SectionEyebrow accent>Drei Bereiche</SectionEyebrow>
+              <h2 className="font-display text-text text-[clamp(2rem,4.5vw,3.4rem)] mt-4 leading-[1.05] tracking-[-0.025em]">
+                Ein Haus. <em className="font-display-italic">Drei Stimmungen.</em>
+              </h2>
+            </Reveal>
+            <Reveal delay={0.12}>
+              <p className="text-text-2 text-[15.5px] leading-[1.7] max-w-xl">
+                Im Restaurant am gedeckten Tisch. Im Biergarten unter den Platanen.
+                Oder im Saal für eine Feier mit der ganzen Familie.
+              </p>
+            </Reveal>
+          </div>
+
+          <div className="space-y-20 md:space-y-28">
+            {places.map((p, i) => (
+              <Reveal key={p.title}>
+                <div className={`grid md:grid-cols-2 gap-8 md:gap-14 items-center ${i % 2 === 1 ? "md:[&>*:first-child]:order-2" : ""}`}>
+                  <div className="relative aspect-[5/4] overflow-hidden bg-bg-3">
+                    <Image
+                      src={p.image}
+                      alt={p.imageAlt}
+                      fill
+                      quality={88}
+                      sizes="(min-width: 768px) 50vw, 100vw"
+                      className="object-cover transition-transform duration-[1400ms] ease-out hover:scale-[1.03]"
+                    />
+                  </div>
+                  <div>
+                    <div className="flex items-center gap-3 mb-5">
+                      <span className="index text-[1rem]">{String(i + 1).padStart(2, "0")}</span>
+                      <SectionEyebrow>{p.title === "Im Haus" ? "Restaurant" : p.title === "Im Biergarten" ? "Biergarten" : "Räumlichkeiten"}</SectionEyebrow>
+                    </div>
+                    <h3 className="font-display text-text text-[clamp(2rem,4.5vw,3rem)] leading-[1.04] tracking-[-0.025em]">
+                      {p.title}
+                    </h3>
+                    <p className="mt-6 text-text-2 text-[16px] leading-[1.7] max-w-xl">{p.body}</p>
+                    <div className="mt-8">
+                      <CtaButton href={p.href} variant="outline">{p.cta}</CtaButton>
+                    </div>
+                  </div>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ─────────────── KÜCHEN-PRINZIPIEN ─────────────── */}
+      <section className="py-20 md:py-32">
+        <div className="container-x">
+          <div className="grid md:grid-cols-[1fr_1.4fr] gap-10 md:gap-16 mb-12 md:mb-14">
+            <Reveal>
+              <SectionEyebrow accent>Die Küche</SectionEyebrow>
+              <h2 className="font-display text-text text-[clamp(1.9rem,4.2vw,3rem)] mt-4 leading-[1.06] tracking-[-0.025em]">
+                Vier Sätze, <em className="font-display-italic">die jeden Teller halten.</em>
+              </h2>
+            </Reveal>
+          </div>
+
+          <StaggerGroup className="border-t border-[color:var(--line)]">
+            {principles.map((p) => (
+              <StaggerItem key={p.n}>
+                <ValueRow number={p.n} label={p.label} title={p.title} body={p.body} />
+              </StaggerItem>
+            ))}
+          </StaggerGroup>
+        </div>
+      </section>
+
+      {/* ─────────────── CHRONIK - historisches Bild ─────────────── */}
+      <section className="bg-bg-2/40 border-y border-[color:var(--line)]">
+        <div className="container-x py-20 md:py-32 grid md:grid-cols-[1fr_1.6fr] gap-10 md:gap-16 items-center">
+          <Reveal>
+            <SectionEyebrow accent>Die Chronik</SectionEyebrow>
+            <h2 className="font-display text-text text-[clamp(2rem,4.5vw,3.2rem)] mt-4 leading-[1.04] tracking-[-0.025em]">
+              Die Hofstelle <em className="font-display-italic">am Alten Postweg.</em>
+            </h2>
+            <p className="mt-6 text-text-2 text-[15.5px] leading-[1.7] max-w-md">
+              Gegründet von Josef Hoffschulte, dem Ur-Urgroßvater des heutigen Wirts.
+              Über sechs Generationen weitergegeben, durch zwei Weltkriege, durch
+              Modernisierungen - immer in Familienhand.
+            </p>
+            <div className="mt-8">
+              <CtaButton href="/ueber-uns" variant="ghost">Mehr zur Familie</CtaButton>
+            </div>
+          </Reveal>
+
+          <Reveal delay={0.1} className="relative aspect-[5/3] md:aspect-[16/10] overflow-hidden">
+            <Image
+              src="/photos/gebaeude-historic.jpg"
+              alt="Historische Aufnahme der Hofstelle Hoffschulte am Alten Postweg"
+              fill
+              quality={92}
+              sizes="(min-width: 768px) 60vw, 100vw"
+              className="object-cover"
+            />
+          </Reveal>
+        </div>
+      </section>
+
+      {/* ─────────────── BEWERTUNGEN ─────────────── */}
+      <section className="py-20 md:py-32">
+        <div className="container-x">
+          <div className="grid md:grid-cols-[1fr_1.4fr] gap-10 md:gap-16 mb-12 md:mb-14 items-end">
+            <Reveal>
+              <SectionEyebrow accent>Stimmen unserer Gäste</SectionEyebrow>
+              <h2 className="font-display text-text text-[clamp(2rem,4.5vw,3.2rem)] mt-4 leading-[1.05] tracking-[-0.025em]">
+                <span className="text-accent">4,6</span> von 5 Sternen, <em className="font-display-italic">über 200 Bewertungen.</em>
+              </h2>
+            </Reveal>
+            <Reveal delay={0.12}>
+              <p className="text-text-2 text-[15px] leading-[1.7] max-w-lg">
+                Auf Google, Tripadvisor und in unseren Gästebüchern. Eine Auswahl -
+                vollständig auf den entsprechenden Plattformen nachzulesen.
+              </p>
+            </Reveal>
+          </div>
+
+          <StaggerGroup className="grid md:grid-cols-3 gap-5 md:gap-6">
+            {reviews.map((r, i) => (
+              <StaggerItem key={i}>
+                <ReviewCard {...r} />
+              </StaggerItem>
+            ))}
+          </StaggerGroup>
+        </div>
+      </section>
+
+      {/* ─────────────── BESUCHEN ─────────────── */}
+      <section className="py-20 md:py-28 bg-bg-2/40 border-t border-[color:var(--line)]">
+        <div className="container-x grid md:grid-cols-[1fr_1.3fr] gap-10 md:gap-14">
+          <div>
+            <SectionEyebrow accent>Besuchen</SectionEyebrow>
+            <h2 className="font-display text-text text-[clamp(2rem,4.5vw,3.2rem)] mt-4 leading-[1.04] tracking-[-0.025em]">
+              Alter Postweg 53, <em className="font-display-italic">am Rand der Stadt.</em>
+            </h2>
+
+            <dl className="mt-10 space-y-7 text-[15.5px]">
+              <div>
+                <dt className="eyebrow text-[0.66rem] mb-2 flex items-center gap-2">
+                  <Clock size={12} strokeWidth={1.7} /> Öffnungszeiten
+                </dt>
+                <dd className="text-text leading-[1.75]">
+                  Freitag & Samstag<br />
+                  <span className="font-display-italic text-accent text-[1.15rem]">{site.hours.fridaySaturday}</span>
+                  <br />
+                  Sonntag & Feiertag<br />
+                  <span className="font-display-italic text-accent text-[1.15rem]">{site.hours.sundayHoliday}</span>
+                  <br />
+                  <span className="text-muted text-[13px]">{site.hours.note}</span>
+                </dd>
+              </div>
+              <div>
+                <dt className="eyebrow text-[0.66rem] mb-2 flex items-center gap-2">
+                  <MapPin size={12} strokeWidth={1.7} /> Adresse
+                </dt>
+                <dd className="text-text">
+                  {site.address.street}<br />
+                  {site.address.postal} {site.address.city}
+                </dd>
+              </div>
+              <div>
+                <dt className="eyebrow text-[0.66rem] mb-2 flex items-center gap-2">
+                  <Phone size={12} strokeWidth={1.7} /> Reservieren
+                </dt>
+                <dd>
+                  <a href={`tel:${site.phone.replace(/\s/g, "")}`} className="font-display-italic text-text text-[1.7rem]">
+                    {site.phoneDisplay}
+                  </a>
+                </dd>
+              </div>
+            </dl>
+
+            <div className="mt-10 flex flex-wrap gap-3">
+              <CtaButton href={site.mapsLink} external>Route planen</CtaButton>
+              <CtaButton href="/kontakt" variant="outline">Anfrage senden</CtaButton>
+            </div>
+          </div>
+
+          <Reveal className="relative aspect-[5/4] md:aspect-auto md:min-h-[480px] overflow-hidden border border-[color:var(--line-strong)]">
+            <iframe
+              title="Karte - Restaurant Hoffschulte"
+              src={site.mapsEmbed}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="absolute inset-0 w-full h-full grayscale-[40%] contrast-105"
+            />
+          </Reveal>
+        </div>
+      </section>
+
+      <RestaurantJsonLd />
+    </>
+  );
+}
+
+function TickerLine() {
+  return (
+    <div className="flex items-center gap-10 text-text-2 px-5 whitespace-nowrap">
+      <span className="font-display-italic text-[1.5rem] md:text-[1.85rem]">Münsterland</span>
+      <span className="text-accent text-lg">✦</span>
+      <span className="font-display-italic text-[1.5rem] md:text-[1.85rem]">Wild aus eigener Jagd</span>
+      <span className="text-accent text-lg">✦</span>
+      <span className="font-display-italic text-[1.5rem] md:text-[1.85rem]">Frischeküche</span>
+      <span className="text-accent text-lg">✦</span>
+      <span className="font-display-italic text-[1.5rem] md:text-[1.85rem]">Sechs Generationen</span>
+      <span className="text-accent text-lg">✦</span>
+      <span className="font-display-italic text-[1.5rem] md:text-[1.85rem]">Biergarten unter Platanen</span>
+      <span className="text-accent text-lg">✦</span>
+    </div>
+  );
+}
+
+function RestaurantJsonLd() {
+  const data = {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    name: site.name,
+    image: `${site.url}/photos/restaurant-classic-2.jpg`,
+    description: site.description,
+    url: site.url,
+    telephone: site.phone,
+    email: site.email,
+    priceRange: "€€",
+    servesCuisine: ["Westfälisch", "Regional", "Wild"],
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: site.address.street,
+      postalCode: site.address.postal,
+      addressLocality: site.address.city,
+      addressRegion: site.address.region,
+      addressCountry: site.address.country,
+    },
+    geo: { "@type": "GeoCoordinates", latitude: site.geo.latitude, longitude: site.geo.longitude },
+    aggregateRating: { "@type": "AggregateRating", ratingValue: 4.6, reviewCount: 218 },
+    openingHoursSpecification: [
+      { "@type": "OpeningHoursSpecification", dayOfWeek: ["Friday", "Saturday"], opens: "17:00", closes: "22:00" },
+      { "@type": "OpeningHoursSpecification", dayOfWeek: ["Sunday"], opens: "12:00", closes: "14:30" },
+      { "@type": "OpeningHoursSpecification", dayOfWeek: ["Sunday"], opens: "17:00", closes: "21:30" },
+    ],
+    sameAs: [site.social.instagram, site.social.facebook],
+  };
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(data).replace(/</g, "\\u003c") }}
+    />
+  );
+}
