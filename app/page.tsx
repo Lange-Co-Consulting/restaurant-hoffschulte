@@ -160,7 +160,7 @@ export default function HomePage() {
             <SectionEyebrow accent>Willkommen</SectionEyebrow>
           </Reveal>
           <Reveal delay={0.15}>
-            <p className="font-display text-text text-[clamp(1.7rem,3.4vw,2.5rem)] leading-[1.2] tracking-[-0.022em] max-w-[28ch]">
+            <p className="font-display text-text text-[clamp(1.5rem,3.2vw,2.4rem)] leading-[1.35] md:leading-[1.22] tracking-[-0.02em] max-w-[28ch]">
               Eine Hofstelle am Alten Postweg, gegründet von{" "}
               <em className="font-display-italic">Josef Hoffschulte</em>. Heute in
               sechster Generation geführt von{" "}
