@@ -4,6 +4,7 @@ import { PageHero } from "@/components/ui/page-hero";
 import { SectionEyebrow } from "@/components/ui/section-eyebrow";
 import { Reveal } from "@/components/ui/reveal";
 import { CtaButton } from "@/components/ui/cta-button";
+import { DecorativeImage } from "@/components/ui/decorative-image";
 
 export const metadata: Metadata = {
   title: "Über uns - Sechs Generationen Familie Hoffschulte",
@@ -24,8 +25,9 @@ export default function UeberUnsPage() {
       />
 
       {/* GESCHICHTE - Text + Chronik-Tafel komplett sichtbar */}
-      <section className="py-20 md:py-32">
-        <div className="container-x grid md:grid-cols-[1fr_1.05fr] gap-12 md:gap-20 items-start">
+      <section className="relative py-20 md:py-32 overflow-hidden">
+        <DecorativeImage src="/photos/dish-vorspeise.jpg" anchor="bottom-right" size="md" drift={100} rotate={-6} />
+        <div className="relative z-10 container-x grid md:grid-cols-[1fr_1.05fr] gap-12 md:gap-20 items-start">
           <Reveal>
             <SectionEyebrow accent>Unsere Geschichte</SectionEyebrow>
             <h2 className="font-display text-text text-[clamp(2.2rem,5vw,3.4rem)] mt-4 leading-[1.04] tracking-[-0.028em]">
@@ -119,8 +121,9 @@ export default function UeberUnsPage() {
       </section>
 
       {/* CARSTEN - VITA */}
-      <section className="py-20 md:py-32">
-        <div className="container-x grid md:grid-cols-[1fr_1.2fr] gap-10 md:gap-16 items-center">
+      <section className="relative py-20 md:py-32 overflow-hidden">
+        <DecorativeImage src="/photos/dish-lammkarree.jpg" anchor="top-right" size="lg" drift={140} rotate={5} />
+        <div className="relative z-10 container-x grid md:grid-cols-[1fr_1.2fr] gap-10 md:gap-16 items-center">
           <Reveal className="relative aspect-[4/5] overflow-hidden bg-bg-3 vignette">
             <Image
               src="/photos/carsten-portrait.jpg"

@@ -6,6 +6,7 @@ import { Reveal, StaggerGroup, StaggerItem } from "@/components/ui/reveal";
 import { CtaButton } from "@/components/ui/cta-button";
 import { ValueRow } from "@/components/ui/value-row";
 import { BentoGallery } from "@/components/ui/bento-gallery";
+import { DecorativeImage } from "@/components/ui/decorative-image";
 
 export const metadata: Metadata = {
   title: "Restaurant - Zeitgemäße Frischeküche",
@@ -77,8 +78,9 @@ export default function RestaurantPage() {
       </section>
 
       {/* PRINCIPLES */}
-      <section className="py-20 md:py-32">
-        <div className="container-x">
+      <section className="relative py-20 md:py-32 overflow-hidden">
+        <DecorativeImage src="/photos/dish-lachs.jpg" anchor="right" size="lg" drift={130} rotate={-5} />
+        <div className="relative z-10 container-x">
           <div className="grid md:grid-cols-[1fr_1.6fr] gap-10 md:gap-16 mb-10 md:mb-14">
             <Reveal>
               <SectionEyebrow accent>Die Küche</SectionEyebrow>
@@ -148,8 +150,9 @@ export default function RestaurantPage() {
       </section>
 
       {/* SPEISEKARTE - echte Karten als Bilder */}
-      <section className="py-20 md:py-32">
-        <div className="container-x">
+      <section className="relative py-20 md:py-32 overflow-hidden">
+        <DecorativeImage src="/photos/dish-schokolade.jpg" anchor="left" size="md" drift={100} rotate={8} />
+        <div className="relative z-10 container-x">
           <div className="grid md:grid-cols-[1fr_1.4fr] gap-10 md:gap-16 mb-12 md:mb-14">
             <Reveal>
               <SectionEyebrow accent>Aktuelle Karte</SectionEyebrow>

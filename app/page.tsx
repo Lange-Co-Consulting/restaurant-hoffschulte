@@ -7,6 +7,7 @@ import { SectionEyebrow } from "@/components/ui/section-eyebrow";
 import { Marquee } from "@/components/ui/marquee";
 import { ValueRow } from "@/components/ui/value-row";
 import { ReviewCard } from "@/components/ui/review-card";
+import { DecorativeImage } from "@/components/ui/decorative-image";
 import { site } from "@/lib/site";
 
 const principles = [
@@ -166,8 +167,9 @@ export default function HomePage() {
       </Marquee>
 
       {/* ─────────────── EINFÜHRUNG ─────────────── */}
-      <section className="py-20 md:py-32">
-        <div className="container-x grid md:grid-cols-[1fr_1.5fr] gap-10 md:gap-16 items-start">
+      <section className="relative py-20 md:py-32 overflow-hidden">
+        <DecorativeImage src="/photos/dish-lammkarree.jpg" anchor="right" size="lg" drift={140} rotate={-8} />
+        <div className="relative z-10 container-x grid md:grid-cols-[1fr_1.5fr] gap-10 md:gap-16 items-start">
           <Reveal>
             <SectionEyebrow accent>Willkommen</SectionEyebrow>
           </Reveal>
@@ -238,8 +240,9 @@ export default function HomePage() {
       </section>
 
       {/* ─────────────── KÜCHEN-PRINZIPIEN ─────────────── */}
-      <section className="py-20 md:py-32">
-        <div className="container-x">
+      <section className="relative py-20 md:py-32 overflow-hidden">
+        <DecorativeImage src="/photos/dish-schokolade.jpg" anchor="left" size="md" drift={100} rotate={6} />
+        <div className="relative z-10 container-x">
           <div className="grid md:grid-cols-[1fr_1.4fr] gap-10 md:gap-16 mb-12 md:mb-14">
             <Reveal>
               <SectionEyebrow accent>Die Küche</SectionEyebrow>
@@ -291,8 +294,9 @@ export default function HomePage() {
       </section>
 
       {/* ─────────────── BEWERTUNGEN ─────────────── */}
-      <section className="py-20 md:py-32">
-        <div className="container-x">
+      <section className="relative py-20 md:py-32 overflow-hidden">
+        <DecorativeImage src="/photos/dish-vorspeise.jpg" anchor="right" size="md" drift={110} rotate={4} shape="circle" />
+        <div className="relative z-10 container-x">
           <div className="grid md:grid-cols-[1fr_1.4fr] gap-10 md:gap-16 mb-12 md:mb-14 items-end">
             <Reveal>
               <SectionEyebrow accent>Stimmen unserer Gäste</SectionEyebrow>
