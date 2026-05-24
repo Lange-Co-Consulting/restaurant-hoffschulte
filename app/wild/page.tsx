@@ -32,8 +32,8 @@ export default function WildPage() {
         number="Kapitel 05"
         title={<>Aus dem Wald in die <em className="font-display-italic text-accent-deep">Pfanne.</em></>}
         intro="Wildfleisch ist gesund, regional und mager. Aus der freien Wildbahn - frei von Medikamenten, garantiert ohne künstliche Konservierungsmittel. Mehr als bio."
-        image="/photos/dish-6.jpg"
-        imageAlt="Wildterrine mit Brioche aus der Hoffschulte-Wildküche"
+        image="/photos/dish-lammkarree.jpg"
+        imageAlt="Lammkarree aus der Hoffschulte-Küche, gestützt auf Bohnen"
       />
 
       {/* JÄGERSPRUCH */}
@@ -47,7 +47,7 @@ export default function WildPage() {
               waidmännisch jagt wie sich's gehört,<br />
               den Schöpfer im Geschöpfe ehrt."
             </p>
-            <footer className="mt-6 label text-[0.62rem]">- Jägerspruch · Tradition</footer>
+            <footer className="mt-6 eyebrow text-[0.62rem]">Jägerspruch · alte Tradition</footer>
           </Reveal>
 
           <Reveal delay={0.1} className="md:pl-12 md:border-l md:border-[color:var(--line-strong)]">
@@ -72,7 +72,7 @@ export default function WildPage() {
             {principles.map((p) => (
               <StaggerItem key={p.n} className="bg-bg p-7 md:p-9 hover:bg-bg-2/60 transition-colors">
                 <span className="index">{p.n}</span>
-                <p className="font-display-italic text-text text-[1.45rem] leading-[1.15] mt-3">{p.text}</p>
+                <p className="font-display-italic text-text text-[1.4rem] leading-[1.2] mt-3">{p.text}</p>
               </StaggerItem>
             ))}
           </StaggerGroup>
@@ -86,18 +86,18 @@ export default function WildPage() {
           <h2 className="h-section mt-5 max-w-3xl">
             Eine Packung. Eine Beilage. <em className="font-display-italic text-accent-deep">Ein Abend zu zweit.</em>
           </h2>
-          <p className="mt-6 text-text-2 text-[16px] max-w-2xl leading-relaxed">
+          <p className="mt-6 body-lead max-w-2xl">
             Alle Wildgerichte sind gegart und schockgefrostet. Eine schonende
             Tiefkühltechnik ohne künstliche Konservierungsmittel.
           </p>
 
-          <div className="grid lg:grid-cols-[1.5fr_1fr] gap-10 md:gap-14 mt-14">
+          <div className="grid lg:grid-cols-[1.5fr_1fr] gap-10 md:gap-14 mt-12">
             <div>
-              <h3 className="font-display-italic text-text text-[1.6rem] mb-4">Wild</h3>
+              <h3 className="font-display-italic text-text text-[1.6rem] mb-2">Wild</h3>
               <div>{wildMenu.map((m) => <MenuItem key={m.name} {...m} />)}</div>
             </div>
             <div>
-              <h3 className="font-display-italic text-text text-[1.6rem] mb-4">Beilagen</h3>
+              <h3 className="font-display-italic text-text text-[1.6rem] mb-2">Beilagen</h3>
               <div>{sides.map((s) => <MenuItem key={s.name} {...s} />)}</div>
             </div>
           </div>
@@ -106,8 +106,8 @@ export default function WildPage() {
             <PullQuote size="lg">
               Wir bieten nur Gerichte an, die ohne Qualitätsverlust leicht und unkompliziert wieder zu erhitzen sind.
             </PullQuote>
-            <div className="flex flex-wrap gap-3 md:justify-end">
-              <CtaButton href="https://wa.me/4915140333499" external>WhatsApp · 0151 40333499</CtaButton>
+            <div className="flex flex-col sm:flex-row sm:flex-wrap gap-3 md:justify-end">
+              <CtaButton href="https://wa.me/4915140333499" external>WhatsApp</CtaButton>
               <CtaButton href="tel:+4925067462" variant="outline" external>02506 7462</CtaButton>
             </div>
           </div>

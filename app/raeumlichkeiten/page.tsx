@@ -74,14 +74,14 @@ export default function RaeumePage() {
                 </div>
                 <div>
                   <div className="flex items-center gap-3 mb-4">
-                    <span className="index">- {r.nr}</span>
+                    <span className="index">{r.nr}</span>
                     <SectionEyebrow accent>{r.capacity}</SectionEyebrow>
                   </div>
                   <h2 className="h-display">
                     {r.name}
                   </h2>
                   <p className="mt-6 body-lead max-w-xl">{r.body}</p>
-                  <div className="mt-8 flex items-center gap-2 text-text-2 text-[13.5px] eyebrow text-[0.62rem]">
+                  <div className="mt-7 inline-flex items-center gap-2 eyebrow text-[0.62rem] text-text-2">
                     <Users size={13} strokeWidth={1.6} />
                     <span>{r.capacity}</span>
                   </div>
@@ -99,14 +99,14 @@ export default function RaeumePage() {
             <Reveal>
               <SectionEyebrow accent>Menüvorschläge für Anlässe</SectionEyebrow>
               <h2 className="h-section mt-4">
-                Unsere Karten - <em className="font-display-italic">individuell anpassbar.</em>
+                Unsere Karten, <em className="font-display-italic text-accent-deep">individuell anpassbar.</em>
               </h2>
             </Reveal>
             <Reveal delay={0.12}>
               <p className="body-lead max-w-xl">
-                Eine Auswahl als Orientierung - vom Drei-Gang-Menü bis zum großen Buffet.
-                Jedes Menü sprechen wir mit Ihnen persönlich durch - saisonal angepasst,
-                Vorspeisen, Gänge und Beilagen nach Ihren Wünschen.
+                Eine Auswahl als Orientierung, vom Drei-Gang-Menü bis zum großen Buffet.
+                Jedes Menü sprechen wir mit Ihnen persönlich durch. Saisonal angepasst,
+                mit Vorspeisen, Gängen und Beilagen nach Ihren Wünschen.
               </p>
             </Reveal>
           </div>
@@ -125,8 +125,8 @@ export default function RaeumePage() {
                       className="object-contain transition-transform duration-700 group-hover:scale-[1.02]"
                     />
                   </div>
-                  <div className="px-6 py-5 flex items-baseline justify-between gap-4 border-t border-[color:var(--line)]">
-                    <h3 className="font-display text-text text-[1.4rem] tracking-[-0.015em]">{m.title}</h3>
+                  <div className="px-6 py-5 flex flex-col gap-1 border-t border-[color:var(--line)]">
+                    <h3 className="h-card text-[1.4rem]">{m.title}</h3>
                     <span className="text-text-2 text-[13.5px]">{m.note}</span>
                   </div>
                 </article>

@@ -28,23 +28,23 @@ export default function AusserHausPage() {
       <PageHero
         eyebrow="Außer-Haus"
         number="Kapitel 04"
-        title={<>Frisch zubereitet - <em className="font-display-italic text-accent-deep">zu Hause genossen.</em></>}
+        title={<>Frisch zubereitet, <em className="font-display-italic text-accent-deep">zu Hause genossen.</em></>}
         intro="Wir kochen frisch, vakuumieren in Zwei-Personen-Portionen und schocken auf Wunsch. Eine schonende Technik zur Konservierung, ohne künstliche Zusätze."
-        image="/photos/dish-8.jpg"
-        imageAlt="Vakuumierte Portionen aus der Hoffschulte-Außer-Haus-Küche"
+        image="/photos/dish-lachs.jpg"
+        imageAlt="Hoffschulte-Gericht — Lammrücken in Kruste auf Pfifferlingen"
       />
 
       <section className="section-y">
         <div className="container-x">
           <SectionEyebrow accent>So funktioniert es</SectionEyebrow>
           <h2 className="h-section mt-4 max-w-3xl">
-            Vier Schritte - <em className="font-display-italic text-accent-deep">vom Anruf bis zum Esstisch.</em>
+            Vier Schritte, <em className="font-display-italic text-accent-deep">vom Anruf bis zum Esstisch.</em>
           </h2>
           <StaggerGroup className="mt-12 grid md:grid-cols-4 gap-px bg-[color:var(--line)] border border-[color:var(--line)]">
             {steps.map((s) => (
               <StaggerItem key={s.nr} className="bg-bg p-7 md:p-9 hover:bg-bg-2/60 transition-colors">
                 <span className="index">{s.nr}</span>
-                <h3 className="font-display text-text text-[1.6rem] mt-3 mb-3 leading-[1.05] tracking-[-0.02em]">{s.title}</h3>
+                <h3 className="h-card text-[1.5rem] mt-3 mb-3">{s.title}</h3>
                 <p className="body-base">{s.body}</p>
               </StaggerItem>
             ))}
@@ -57,27 +57,27 @@ export default function AusserHausPage() {
         <div className="container-x">
           <SectionEyebrow accent>Karte zum Mitnehmen</SectionEyebrow>
           <h2 className="h-section mt-4 max-w-3xl">
-            Klassiker aus unserer Küche - <em className="font-display-italic text-accent-deep">für zwei.</em>
+            Klassiker aus unserer Küche, <em className="font-display-italic text-accent-deep">für zwei.</em>
           </h2>
 
-          <div className="grid lg:grid-cols-[1fr_1.4fr_1fr] gap-12 md:gap-16 mt-14">
+          <div className="grid lg:grid-cols-[1fr_1.4fr_1fr] gap-10 md:gap-14 mt-12">
             <div>
-              <h3 className="font-display-italic text-text text-[1.6rem] mb-3">Suppen</h3>
+              <h3 className="font-display-italic text-text text-[1.5rem] mb-2">Suppen</h3>
               <div>{soups.map((s) => <MenuItem key={s.name} {...s} />)}</div>
             </div>
             <div>
-              <h3 className="font-display-italic text-text text-[1.6rem] mb-3">Hauptgerichte</h3>
+              <h3 className="font-display-italic text-text text-[1.5rem] mb-2">Hauptgerichte</h3>
               <div>{mains.map((m) => <MenuItem key={m.name} {...m} />)}</div>
             </div>
             <div>
-              <h3 className="font-display-italic text-text text-[1.6rem] mb-3">Beilagen</h3>
+              <h3 className="font-display-italic text-text text-[1.5rem] mb-2">Beilagen</h3>
               <div>{sides.map((s) => <MenuItem key={s.name} {...s} />)}</div>
             </div>
           </div>
 
-          <p className="mt-12 text-muted text-[14px] max-w-2xl">
+          <p className="mt-12 text-muted text-[13.5px] max-w-2xl leading-relaxed">
             Saisonale Ergänzungen, Wild aus eigener Jagd und Vorbestell-Sonderwünsche
-            (Gans, Ente, Festmenüs) auf Anfrage. Alle Preise pro Packung (zwei Portionen).
+            (Gans, Ente, Festmenüs) auf Anfrage. Alle Preise pro Packung für zwei Portionen.
           </p>
         </div>
       </section>
@@ -126,8 +126,8 @@ export default function AusserHausPage() {
 
           <Reveal delay={0.1} className="md:pl-12 md:border-l md:border-[color:var(--line-strong)]">
             <SectionEyebrow>Abholung</SectionEyebrow>
-            <p className="mt-4 font-display-italic text-text text-[2rem] md:text-[2.2rem] leading-[1.1]">
-              Samstags zwischen 15 und 18 Uhr - oder nach Absprache.
+            <p className="mt-4 font-display-italic text-text text-[1.9rem] md:text-[2.15rem] leading-[1.12]">
+              Samstags zwischen 15 und 18 Uhr, oder nach Absprache.
             </p>
             <p className="mt-6 body-base">
               Eine Aufwärmanleitung legen wir jeder Bestellung bei. Wer länger im
