@@ -96,7 +96,7 @@ export default function HomePage() {
                   <span aria-hidden className="h-px w-7 bg-accent-deep" />
                   Münster · Alter Postweg 53
                 </span>
-                <span className="font-display-italic text-accent-deep text-[0.95rem] font-medium">- seit sechs Generationen</span>
+                <span className="font-display-italic text-accent-deep text-[0.95rem] font-medium">seit sechs Generationen</span>
               </div>
             </Reveal>
 
@@ -147,7 +147,7 @@ export default function HomePage() {
       </Marquee>
 
       {/* ─────────────── EINFÜHRUNG ─────────────── */}
-      <section className="relative py-20 md:py-32 overflow-hidden">
+      <section className="relative section-y overflow-hidden">
         <DecorativeImage src="/photos/dish-lammkarree.jpg" anchor="right" size="lg" drift={140} rotate={-8} />
         <div className="relative z-10 container-x grid md:grid-cols-[1fr_1.5fr] gap-10 md:gap-16 items-start">
           <Reveal>
@@ -168,17 +168,17 @@ export default function HomePage() {
       </section>
 
       {/* ─────────────── DREI BEREICHE (Zigzag) ─────────────── */}
-      <section className="py-20 md:py-28 border-t border-[color:var(--line)] bg-bg-2/40">
+      <section className="section-y border-t border-[color:var(--line)] bg-bg-2/40">
         <div className="container-x">
           <div className="grid md:grid-cols-[1fr_1.5fr] gap-10 md:gap-16 items-end mb-12 md:mb-16">
             <Reveal>
               <SectionEyebrow accent>Drei Bereiche</SectionEyebrow>
-              <h2 className="font-display text-text text-[clamp(2rem,4.5vw,3.4rem)] mt-4 leading-[1.05] tracking-[-0.025em]">
-                Ein Haus. <em className="font-display-italic">Drei Stimmungen.</em>
+              <h2 className="h-section mt-4">
+                Ein Haus. <em className="font-display-italic text-accent-deep">Drei Stimmungen.</em>
               </h2>
             </Reveal>
             <Reveal delay={0.12}>
-              <p className="text-text-2 text-[15.5px] leading-[1.7] max-w-xl">
+              <p className="body-lead max-w-xl">
                 Im Restaurant am gedeckten Tisch. Im Biergarten unter den Platanen.
                 Oder im Saal für eine Feier mit der ganzen Familie.
               </p>
@@ -204,7 +204,7 @@ export default function HomePage() {
                       <span className="index text-[1rem]">{String(i + 1).padStart(2, "0")}</span>
                       <SectionEyebrow>{p.title === "Im Haus" ? "Restaurant" : p.title === "Im Biergarten" ? "Biergarten" : "Räumlichkeiten"}</SectionEyebrow>
                     </div>
-                    <h3 className="font-display text-text text-[clamp(2rem,4.5vw,3rem)] leading-[1.04] tracking-[-0.025em]">
+                    <h3 className="h-card text-[clamp(1.8rem,3.5vw,2.4rem)]">
                       {p.title}
                     </h3>
                     <p className="mt-6 text-text-2 text-[16px] leading-[1.7] max-w-xl">{p.body}</p>
@@ -220,14 +220,14 @@ export default function HomePage() {
       </section>
 
       {/* ─────────────── KÜCHEN-PRINZIPIEN ─────────────── */}
-      <section className="relative py-20 md:py-32 overflow-hidden">
+      <section className="relative section-y overflow-hidden">
         <DecorativeImage src="/photos/dish-schokolade.jpg" anchor="left" size="md" drift={100} rotate={6} />
         <div className="relative z-10 container-x">
           <div className="grid md:grid-cols-[1fr_1.4fr] gap-10 md:gap-16 mb-12 md:mb-14">
             <Reveal>
               <SectionEyebrow accent>Die Küche</SectionEyebrow>
-              <h2 className="font-display text-text text-[clamp(1.9rem,4.2vw,3rem)] mt-4 leading-[1.06] tracking-[-0.025em]">
-                Vier Sätze, <em className="font-display-italic">die jeden Teller halten.</em>
+              <h2 className="h-section mt-4">
+                Vier Sätze, <em className="font-display-italic text-accent-deep">die jeden Teller halten.</em>
               </h2>
             </Reveal>
           </div>
@@ -244,13 +244,13 @@ export default function HomePage() {
 
       {/* ─────────────── CHRONIK - historisches Bild ─────────────── */}
       <section className="bg-bg-2/40 border-y border-[color:var(--line)]">
-        <div className="container-x py-20 md:py-32 grid md:grid-cols-[1fr_1.6fr] gap-10 md:gap-16 items-center">
+        <div className="container-x section-y grid md:grid-cols-[1fr_1.6fr] gap-10 md:gap-16 items-center">
           <Reveal>
             <SectionEyebrow accent>Die Chronik</SectionEyebrow>
-            <h2 className="font-display text-text text-[clamp(2rem,4.5vw,3.2rem)] mt-4 leading-[1.04] tracking-[-0.025em]">
-              Die Hofstelle <em className="font-display-italic">am Alten Postweg.</em>
+            <h2 className="h-section mt-4">
+              Die Hofstelle <em className="font-display-italic text-accent-deep">am Alten Postweg.</em>
             </h2>
-            <p className="mt-6 text-text-2 text-[15.5px] leading-[1.7] max-w-md">
+            <p className="mt-6 body-lead max-w-md">
               Gegründet von Josef Hoffschulte, dem Ur-Urgroßvater des heutigen Wirts.
               Über sechs Generationen weitergegeben, durch zwei Weltkriege, durch
               Modernisierungen - immer in Familienhand.
@@ -274,20 +274,20 @@ export default function HomePage() {
       </section>
 
       {/* ─────────────── BEWERTUNGEN ─────────────── */}
-      <section className="relative py-20 md:py-32 overflow-hidden">
+      <section className="relative section-y overflow-hidden">
         <DecorativeImage src="/photos/dish-vorspeise.jpg" anchor="right" size="md" drift={110} rotate={4} shape="circle" />
         <div className="relative z-10 container-x">
           <div className="grid md:grid-cols-[1fr_1.4fr] gap-10 md:gap-16 mb-12 md:mb-14 items-end">
             <Reveal>
-              <SectionEyebrow accent>Stimmen unserer Gäste</SectionEyebrow>
-              <h2 className="font-display text-text text-[clamp(2rem,4.5vw,3.2rem)] mt-4 leading-[1.05] tracking-[-0.025em]">
-                <span className="text-accent">4,6</span> von 5 Sternen, <em className="font-display-italic">über 200 Bewertungen.</em>
+              <SectionEyebrow accent>Was unsere Gäste sagen</SectionEyebrow>
+              <h2 className="h-section mt-4">
+                Vierkommasechs von fünf. <em className="font-display-italic text-accent-deep">Über 200 Bewertungen.</em>
               </h2>
             </Reveal>
             <Reveal delay={0.12}>
-              <p className="text-text-2 text-[15px] leading-[1.7] max-w-lg">
-                Auf Google, Tripadvisor und in unseren Gästebüchern. Eine Auswahl -
-                vollständig auf den entsprechenden Plattformen nachzulesen.
+              <p className="body-lead max-w-lg">
+                Auf Google, Tripadvisor und in unseren Gästebüchern.
+                Eine kleine Auswahl - das volle Bild auf den jeweiligen Plattformen.
               </p>
             </Reveal>
           </div>
@@ -303,12 +303,12 @@ export default function HomePage() {
       </section>
 
       {/* ─────────────── BESUCHEN ─────────────── */}
-      <section className="py-20 md:py-28 bg-bg-2/40 border-t border-[color:var(--line)]">
+      <section className="section-y bg-bg-2/40 border-t border-[color:var(--line)]">
         <div className="container-x grid md:grid-cols-[1fr_1.3fr] gap-10 md:gap-14">
           <div>
             <SectionEyebrow accent>Besuchen</SectionEyebrow>
-            <h2 className="font-display text-text text-[clamp(2rem,4.5vw,3.2rem)] mt-4 leading-[1.04] tracking-[-0.025em]">
-              Alter Postweg 53, <em className="font-display-italic">am Rand der Stadt.</em>
+            <h2 className="h-section mt-4">
+              Alter Postweg 53, <em className="font-display-italic text-accent-deep">am Rand der Stadt.</em>
             </h2>
 
             <dl className="mt-10 space-y-7 text-[15.5px]">

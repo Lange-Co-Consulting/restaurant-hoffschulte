@@ -63,13 +63,13 @@ export default function RestaurantPage() {
       </section>
 
       {/* PRINCIPLES */}
-      <section className="relative py-20 md:py-32 overflow-hidden">
+      <section className="relative section-y overflow-hidden">
         <DecorativeImage src="/photos/dish-lachs.jpg" anchor="right" size="lg" drift={130} rotate={-5} />
         <div className="relative z-10 container-x">
           <div className="grid md:grid-cols-[1fr_1.6fr] gap-10 md:gap-16 mb-10 md:mb-14">
             <Reveal>
               <SectionEyebrow accent>Die Küche</SectionEyebrow>
-              <h2 className="font-display text-text text-[clamp(2rem,4.6vw,3.4rem)] mt-4 leading-[1.05] tracking-[-0.025em]">
+              <h2 className="h-section mt-4">
                 Vier Sätze, <em className="font-display-italic text-accent">die jeden Teller halten.</em>
               </h2>
             </Reveal>
@@ -86,7 +86,7 @@ export default function RestaurantPage() {
       </section>
 
       {/* CARSTEN - mit echtem Portrait */}
-      <section className="bg-bg-2/40 border-y border-[color:var(--line)] py-20 md:py-28">
+      <section className="section-y bg-bg-2/40 border-y border-[color:var(--line)]">
         <div className="container-x grid md:grid-cols-[1fr_1.2fr] gap-10 md:gap-16 items-center">
           <Reveal className="relative aspect-[4/5] overflow-hidden bg-bg-3 vignette">
             <Image
@@ -101,13 +101,13 @@ export default function RestaurantPage() {
 
           <Reveal delay={0.1}>
             <SectionEyebrow accent>Der Wirt</SectionEyebrow>
-            <h2 className="font-display text-text text-[clamp(2.4rem,5vw,3.6rem)] mt-4 leading-[1.02] tracking-[-0.03em]">
+            <h2 className="h-display mt-4">
               Carsten <em className="font-display-italic">Hoffschulte.</em>
             </h2>
             <p className="mt-3 text-text-2 text-[1rem] font-display-italic">
               Jäger · Koch · Küchenmeister · sechste Generation.
             </p>
-            <p className="mt-6 text-text-2 text-[16px] leading-[1.7] max-w-lg">
+            <p className="mt-6 body-lead max-w-lg">
               Geboren 1978 in Münster. Seit 1994 Jäger im eigenen Revier, seit 1998 Koch,
               seit 2008 Küchenmeister. Sein Stil: westfälisch verwurzelt, technisch sauber,
               ohne Effekthascherei.
@@ -135,18 +135,18 @@ export default function RestaurantPage() {
       </section>
 
       {/* SPEISEKARTE - echte Karten als Bilder */}
-      <section className="relative py-20 md:py-32 overflow-hidden">
+      <section className="relative section-y overflow-hidden">
         <DecorativeImage src="/photos/dish-schokolade.jpg" anchor="left" size="md" drift={100} rotate={8} />
         <div className="relative z-10 container-x">
           <div className="grid md:grid-cols-[1fr_1.4fr] gap-10 md:gap-16 mb-12 md:mb-14">
             <Reveal>
               <SectionEyebrow accent>Aktuelle Karte</SectionEyebrow>
-              <h2 className="font-display text-text text-[clamp(2rem,4.6vw,3.4rem)] mt-4 leading-[1.05] tracking-[-0.025em]">
+              <h2 className="h-section mt-4">
                 Unsere Karte - <em className="font-display-italic">saisonal angepasst.</em>
               </h2>
             </Reveal>
             <Reveal delay={0.12}>
-              <p className="text-text-2 text-[15.5px] leading-[1.7] max-w-xl">
+              <p className="body-lead max-w-xl">
                 Die aktuelle Karte unseres Hauses. Wir passen sie laufend an die Saison
                 und an das, was unsere Erzeuger heute liefern. Mit Allergien oder
                 besonderen Wünschen bitte kurz vorher anrufen - <a href="tel:+4925067462" className="text-accent hover:text-accent-deep">02506 7462</a>.
@@ -183,10 +183,10 @@ export default function RestaurantPage() {
       </section>
 
       {/* DISH GRID - Bento mit ECHTEN Bildern */}
-      <section className="py-20 md:py-28 bg-bg-2/40 border-t border-[color:var(--line)]">
+      <section className="section-y bg-bg-2/40 border-t border-[color:var(--line)]">
         <div className="container-x">
           <SectionEyebrow accent>Aus der Küche</SectionEyebrow>
-          <h2 className="font-display text-text text-[clamp(2rem,4.5vw,3.4rem)] mt-4 leading-[1.05] tracking-[-0.025em] mb-12 max-w-3xl">
+          <h2 className="h-section mt-4 mb-12 max-w-3xl">
             Was wir <em className="font-display-italic text-accent">aufgetragen</em> haben.
           </h2>
           <BentoGallery items={stations} />

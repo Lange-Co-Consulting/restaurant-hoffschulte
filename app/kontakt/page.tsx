@@ -23,11 +23,11 @@ export default function KontaktPage() {
         imageAlt="Innenraum mit Kamin und gedeckten Tischen"
       />
 
-      <section className="py-20 md:py-32">
+      <section className="section-y">
         <div className="container-x grid lg:grid-cols-[1fr_1.2fr] gap-10 md:gap-16">
           <div>
             <SectionEyebrow accent>Direkt</SectionEyebrow>
-            <h2 className="font-display text-text text-[clamp(2rem,4.6vw,3rem)] mt-4 leading-[1.05] tracking-[-0.03em]">
+            <h2 className="h-section mt-4">
               Restaurant <em className="font-display-italic">Hoffschulte.</em>
             </h2>
 
@@ -81,7 +81,7 @@ export default function KontaktPage() {
 
           <div className="lg:pl-12 lg:border-l lg:border-[color:var(--line-strong)]">
             <SectionEyebrow>Anfrage senden</SectionEyebrow>
-            <h2 className="font-display text-text text-[clamp(1.8rem,4vw,2.6rem)] mt-4 leading-[1.05] tracking-[-0.03em] mb-8">
+            <h2 className="h-section mt-4 mb-8">
               Wir antworten <em className="font-display-italic text-accent">persönlich.</em>
             </h2>
             <ContactForm />

@@ -25,16 +25,16 @@ export default function UeberUnsPage() {
       />
 
       {/* GESCHICHTE - Text + Chronik-Tafel komplett sichtbar */}
-      <section className="relative py-20 md:py-32 overflow-hidden">
+      <section className="relative section-y overflow-hidden">
         <DecorativeImage src="/photos/dish-vorspeise.jpg" anchor="bottom-right" size="md" drift={100} rotate={-6} />
         <div className="relative z-10 container-x grid md:grid-cols-[1fr_1.05fr] gap-12 md:gap-20 items-start">
           <Reveal>
             <SectionEyebrow accent>Unsere Geschichte</SectionEyebrow>
-            <h2 className="font-display text-text text-[clamp(2.2rem,5vw,3.4rem)] mt-4 leading-[1.04] tracking-[-0.028em]">
+            <h2 className="h-section mt-4">
               Vom Hof zur <em className="font-display-italic text-accent">Gastwirtschaft.</em>
             </h2>
 
-            <div className="mt-7 space-y-5 text-text-2 text-[16.5px] leading-[1.78] max-w-lg">
+            <div className="mt-7 space-y-5 body-lead max-w-lg">
               <p>
                 Bereits im Jahr <span className="text-text">1050</span> wird der Hof
                 Hoffschulte zu Angelmodde erstmals erwähnt. Über Jahrhunderte bleibt
@@ -90,17 +90,17 @@ export default function UeberUnsPage() {
       </section>
 
       {/* HOFSTELLE - historisches Bild der Außenansicht */}
-      <section className="bg-bg-2/40 border-y border-[color:var(--line)] py-20 md:py-32">
+      <section className="section-y bg-bg-2/40 border-y border-[color:var(--line)]">
         <div className="container-x">
           <div className="grid md:grid-cols-[1fr_1.4fr] gap-10 md:gap-16 mb-10 md:mb-14">
             <Reveal>
               <SectionEyebrow accent>Die Hofstelle</SectionEyebrow>
-              <h2 className="font-display text-text text-[clamp(2.2rem,5vw,3.4rem)] mt-4 leading-[1.02] tracking-[-0.028em]">
+              <h2 className="h-section mt-4">
                 Am Alten Postweg, <em className="font-display-italic">seit Generationen.</em>
               </h2>
             </Reveal>
             <Reveal delay={0.12}>
-              <p className="text-text-2 text-[16px] leading-[1.7] max-w-xl">
+              <p className="body-lead max-w-xl">
                 Fachwerk, Sandsteinbogen, Backstein, Pfannendach.
                 Wenig hat sich am Äußeren verändert.
               </p>
@@ -121,7 +121,7 @@ export default function UeberUnsPage() {
       </section>
 
       {/* CARSTEN - VITA */}
-      <section className="relative py-20 md:py-32 overflow-hidden">
+      <section className="relative section-y overflow-hidden">
         <DecorativeImage src="/photos/dish-lammkarree.jpg" anchor="top-right" size="lg" drift={140} rotate={5} />
         <div className="relative z-10 container-x grid md:grid-cols-[1fr_1.2fr] gap-10 md:gap-16 items-center">
           <Reveal className="relative aspect-[4/5] overflow-hidden bg-bg-3 vignette">
@@ -137,13 +137,13 @@ export default function UeberUnsPage() {
 
           <Reveal delay={0.1}>
             <SectionEyebrow accent>Der Wirt heute</SectionEyebrow>
-            <h2 className="font-display text-text text-[clamp(2.4rem,5.2vw,3.8rem)] mt-4 leading-[1.02] tracking-[-0.03em]">
+            <h2 className="h-display mt-4">
               Carsten <em className="font-display-italic">Hoffschulte.</em>
             </h2>
             <p className="mt-3 text-text-2 text-[1rem] font-display-italic">
               Jäger · Koch · Küchenmeister · sechste Generation.
             </p>
-            <p className="mt-6 text-text-2 text-[16px] leading-[1.7] max-w-md">
+            <p className="mt-6 body-lead max-w-md">
               Geboren in Münster. Seit 1994 Jäger im eigenen Revier, seit 1998 Koch,
               seit 2008 Küchenmeister mit eigener Handschrift in einer alten Tradition.
             </p>

@@ -54,7 +54,7 @@ export default function RaeumePage() {
         imageAlt="Kaminraum mit langen Tafeln und Kupfertheke"
       />
 
-      <section className="py-20 md:py-32">
+      <section className="section-y">
         <div className="container-x space-y-24 md:space-y-32">
           {rooms.map((r, i) => (
             <Reveal key={r.name}>
@@ -77,10 +77,10 @@ export default function RaeumePage() {
                     <span className="index">- {r.nr}</span>
                     <SectionEyebrow accent>{r.capacity}</SectionEyebrow>
                   </div>
-                  <h2 className="font-display text-text text-[clamp(2.4rem,5.4vw,4rem)] leading-[1.02] tracking-[-0.03em]">
+                  <h2 className="h-display">
                     {r.name}
                   </h2>
-                  <p className="mt-6 text-text-2 text-[16.5px] leading-[1.7] max-w-xl">{r.body}</p>
+                  <p className="mt-6 body-lead max-w-xl">{r.body}</p>
                   <div className="mt-8 flex items-center gap-2 text-text-2 text-[13.5px] eyebrow text-[0.62rem]">
                     <Users size={13} strokeWidth={1.6} />
                     <span>{r.capacity}</span>
@@ -93,17 +93,17 @@ export default function RaeumePage() {
       </section>
 
       {/* EVENT MENUS - als echte Menükarten-Bilder */}
-      <section className="py-20 md:py-32 bg-bg-2/40 border-y border-[color:var(--line)]">
+      <section className="section-y bg-bg-2/40 border-y border-[color:var(--line)]">
         <div className="container-x">
           <div className="grid md:grid-cols-[1fr_1.4fr] gap-10 md:gap-16 mb-12 md:mb-14">
             <Reveal>
               <SectionEyebrow accent>Menüvorschläge für Anlässe</SectionEyebrow>
-              <h2 className="font-display text-text text-[clamp(2rem,4.6vw,3.4rem)] mt-4 leading-[1.05] tracking-[-0.025em]">
+              <h2 className="h-section mt-4">
                 Unsere Karten - <em className="font-display-italic">individuell anpassbar.</em>
               </h2>
             </Reveal>
             <Reveal delay={0.12}>
-              <p className="text-text-2 text-[15.5px] leading-[1.7] max-w-xl">
+              <p className="body-lead max-w-xl">
                 Eine Auswahl als Orientierung - vom Drei-Gang-Menü bis zum großen Buffet.
                 Jedes Menü sprechen wir mit Ihnen persönlich durch - saisonal angepasst,
                 Vorspeisen, Gänge und Beilagen nach Ihren Wünschen.
@@ -142,13 +142,13 @@ export default function RaeumePage() {
       </section>
 
       {/* INQUIRY CTA */}
-      <section className="py-20 md:py-32">
+      <section className="section-y">
         <div className="container-x text-center max-w-3xl mx-auto">
           <SectionEyebrow accent className="justify-center inline-flex">Anfrage</SectionEyebrow>
-          <h2 className="font-display text-text text-[clamp(2.4rem,5.4vw,4rem)] mt-5 leading-[1.02] tracking-[-0.03em]">
+          <h2 className="h-display mt-5">
             Erzählen Sie uns <em className="font-display-italic text-accent">vom Anlass.</em>
           </h2>
-          <p className="mt-6 text-text-2 text-[16px] md:text-[17px] leading-relaxed">
+          <p className="mt-6 body-lead">
             Datum, Personenzahl, Wünsche zur Karte und zum Ablauf - wir antworten
             persönlich. Telefonisch direkt, schriftlich bis zum nächsten Tag.
           </p>

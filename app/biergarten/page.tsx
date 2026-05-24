@@ -45,14 +45,14 @@ export default function BiergartenPage() {
       </section>
 
       {/* RESERVATION NOTE */}
-      <section className="py-20 md:py-32">
+      <section className="section-y">
         <div className="container-x grid md:grid-cols-[1.3fr_1fr] gap-10 md:gap-16">
           <Reveal>
             <SectionEyebrow accent>So einfach</SectionEyebrow>
-            <h2 className="font-display text-text text-[clamp(2rem,4.6vw,3.4rem)] mt-5 leading-[1.05] tracking-[-0.03em]">
+            <h2 className="h-section mt-5">
               Eine Reservierung. <em className="font-display-italic text-accent">Zwei Möglichkeiten.</em>
             </h2>
-            <div className="mt-8 space-y-5 text-text-2 text-[16px] md:text-[16.5px] leading-[1.7] max-w-2xl">
+            <div className="mt-8 space-y-5 body-lead max-w-2xl">
               <p>
                 Ihre Reservierung wird, je nach Wetterlage, automatisch auch im
                 Biergarten vorgenommen. Vor Ort entscheiden Sie, ob Sie draußen
@@ -80,10 +80,10 @@ export default function BiergartenPage() {
       </section>
 
       {/* BEERS */}
-      <section className="bg-bg-2/30 border-y border-[color:var(--line)] py-20 md:py-28">
+      <section className="section-y bg-bg-2/30 border-y border-[color:var(--line)]">
         <div className="container-x">
           <SectionEyebrow accent>Vom Fass</SectionEyebrow>
-          <h2 className="font-display text-text text-[clamp(2rem,4.6vw,3.4rem)] mt-5 leading-[1.05] tracking-[-0.03em] max-w-3xl">
+          <h2 className="h-section mt-5 max-w-3xl">
             Vier Biere, <em className="font-display-italic text-accent">jedes mit Heimat.</em>
           </h2>
 

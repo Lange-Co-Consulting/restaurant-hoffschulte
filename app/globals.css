@@ -36,6 +36,12 @@
 
   --shadow-soft: 0 18px 60px -22px oklch(0.18 0.012 95 / 0.18);
   --shadow-strong: 0 30px 80px -30px oklch(0.18 0.012 95 / 0.32);
+
+  /* Vertical rhythm tokens — sections breathe consistently */
+  --section-y: clamp(4.5rem, 9vw, 7.5rem);   /* y-padding für jede Sektion */
+  --section-y-lg: clamp(5.5rem, 11vw, 9rem); /* hero/manifest etc. */
+  --content-gap: clamp(2.5rem, 4vw, 4rem);   /* Lücke zwischen Headline-Block und Content */
+  --grid-gap: clamp(2rem, 3.5vw, 4rem);      /* zwischen Spalten */
 }
 
 @theme inline {
@@ -153,7 +159,7 @@
   }
   .eyebrow-accent,
   .label-accent {
-    color: var(--accent);
+    color: var(--accent-deep);
   }
 
   .container-x {
@@ -179,7 +185,7 @@
     font-family: var(--font-display);
     font-style: italic;
     font-variation-settings: "opsz" 16;
-    color: var(--accent);
+    color: var(--accent-deep);
     font-size: 1rem;
     letter-spacing: 0;
   }
@@ -228,6 +234,48 @@
   .magnetic {
     will-change: transform;
     transition: transform 0.6s cubic-bezier(0.22, 0.61, 0.36, 1);
+  }
+
+  /* Section padding utilities */
+  .section-y    { padding-block: var(--section-y); }
+  .section-y-lg { padding-block: var(--section-y-lg); }
+
+  /* Heading scales — normalisiert auf 3 Stufen */
+  .h-display {
+    font-family: var(--font-display);
+    font-variation-settings: "opsz" 144;
+    letter-spacing: -0.03em;
+    line-height: 1.02;
+    font-size: clamp(2.4rem, 5.5vw, 4rem);
+    color: var(--text);
+  }
+  .h-section {
+    font-family: var(--font-display);
+    font-variation-settings: "opsz" 144;
+    letter-spacing: -0.025em;
+    line-height: 1.05;
+    font-size: clamp(2rem, 4.4vw, 3.2rem);
+    color: var(--text);
+  }
+  .h-card {
+    font-family: var(--font-display);
+    font-variation-settings: "opsz" 144;
+    letter-spacing: -0.02em;
+    line-height: 1.08;
+    font-size: clamp(1.35rem, 2vw, 1.65rem);
+    color: var(--text);
+  }
+
+  /* Body text scales */
+  .body-lead {
+    font-size: clamp(1rem, 1.2vw, 1.0625rem);
+    line-height: 1.7;
+    color: var(--text-2);
+  }
+  .body-base {
+    font-size: 0.95rem;
+    line-height: 1.65;
+    color: var(--text-2);
   }
 }
 

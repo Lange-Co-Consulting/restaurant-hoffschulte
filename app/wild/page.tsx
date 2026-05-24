@@ -37,7 +37,7 @@ export default function WildPage() {
       />
 
       {/* JÄGERSPRUCH */}
-      <section className="py-20 md:py-32">
+      <section className="section-y">
         <div className="container-x grid md:grid-cols-[1.4fr_1fr] gap-10 md:gap-16">
           <Reveal>
             <SectionEyebrow accent>Des Jägers Ehrenschild</SectionEyebrow>
@@ -51,12 +51,12 @@ export default function WildPage() {
           </Reveal>
 
           <Reveal delay={0.1} className="md:pl-12 md:border-l md:border-[color:var(--line-strong)]">
-            <p className="text-text-2 text-[16px] md:text-[16.5px] leading-[1.7] max-w-md">
+            <p className="body-lead max-w-md">
               Carsten Hoffschulte ist seit 1994 Jäger. Wildfleisch wird im Rahmen
               der Jagd aus der unberührten Natur gewonnen und in unserer Küche
               direkt verarbeitet. Leichter verdaulich, mager, cholesterinarm.
             </p>
-            <p className="mt-6 text-text-2 text-[16px] leading-[1.7] max-w-md">
+            <p className="mt-6 body-lead max-w-md">
               Wir nennen das nicht „bio". Wir nennen es{" "}
               <em className="not-italic text-accent font-medium">mehr als bio</em>.
             </p>
@@ -65,7 +65,7 @@ export default function WildPage() {
       </section>
 
       {/* FIVE PRINCIPLES */}
-      <section className="bg-bg-2/30 border-y border-[color:var(--line)] py-20 md:py-28">
+      <section className="section-y bg-bg-2/30 border-y border-[color:var(--line)]">
         <div className="container-x">
           <SectionEyebrow accent>Fünf Standards</SectionEyebrow>
           <StaggerGroup className="mt-10 grid sm:grid-cols-2 lg:grid-cols-5 gap-px bg-[color:var(--line)] border border-[color:var(--line)]">
@@ -80,10 +80,10 @@ export default function WildPage() {
       </section>
 
       {/* MENU */}
-      <section className="py-20 md:py-32">
+      <section className="section-y">
         <div className="container-x">
           <SectionEyebrow accent>Aktuelles Wild-Angebot</SectionEyebrow>
-          <h2 className="font-display text-text text-[clamp(2rem,4.6vw,3.4rem)] mt-5 leading-[1.05] tracking-[-0.03em] max-w-3xl">
+          <h2 className="h-section mt-5 max-w-3xl">
             Eine Packung. Eine Beilage. <em className="font-display-italic text-accent">Ein Abend zu zweit.</em>
           </h2>
           <p className="mt-6 text-text-2 text-[16px] max-w-2xl leading-relaxed">

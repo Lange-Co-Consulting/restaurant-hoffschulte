@@ -34,10 +34,10 @@ export default function AusserHausPage() {
         imageAlt="Vakuumierte Portionen aus der Hoffschulte-Außer-Haus-Küche"
       />
 
-      <section className="py-20 md:py-32">
+      <section className="section-y">
         <div className="container-x">
           <SectionEyebrow accent>So funktioniert es</SectionEyebrow>
-          <h2 className="font-display text-text text-[clamp(2rem,4.6vw,3.4rem)] mt-4 leading-[1.05] tracking-[-0.025em] max-w-3xl">
+          <h2 className="h-section mt-4 max-w-3xl">
             Vier Schritte - <em className="font-display-italic text-accent">vom Anruf bis zum Esstisch.</em>
           </h2>
           <StaggerGroup className="mt-12 grid md:grid-cols-4 gap-px bg-[color:var(--line)] border border-[color:var(--line)]">
@@ -45,7 +45,7 @@ export default function AusserHausPage() {
               <StaggerItem key={s.nr} className="bg-bg p-7 md:p-9 hover:bg-bg-2/60 transition-colors">
                 <span className="index">{s.nr}</span>
                 <h3 className="font-display text-text text-[1.6rem] mt-3 mb-3 leading-[1.05] tracking-[-0.02em]">{s.title}</h3>
-                <p className="text-text-2 text-[14.5px] leading-[1.65]">{s.body}</p>
+                <p className="body-base">{s.body}</p>
               </StaggerItem>
             ))}
           </StaggerGroup>
@@ -53,10 +53,10 @@ export default function AusserHausPage() {
       </section>
 
       {/* MENU */}
-      <section className="bg-bg-2/40 border-y border-[color:var(--line)] py-20 md:py-32">
+      <section className="section-y bg-bg-2/40 border-y border-[color:var(--line)]">
         <div className="container-x">
           <SectionEyebrow accent>Karte zum Mitnehmen</SectionEyebrow>
-          <h2 className="font-display text-text text-[clamp(2rem,4.6vw,3.4rem)] mt-4 leading-[1.05] tracking-[-0.025em] max-w-3xl">
+          <h2 className="h-section mt-4 max-w-3xl">
             Klassiker aus unserer Küche - <em className="font-display-italic text-accent">für zwei.</em>
           </h2>
 
@@ -83,11 +83,11 @@ export default function AusserHausPage() {
       </section>
 
       {/* ORDER */}
-      <section className="py-20 md:py-32">
+      <section className="section-y">
         <div className="container-x grid md:grid-cols-[1.2fr_1fr] gap-12 md:gap-16">
           <Reveal>
             <SectionEyebrow accent>Bestellen</SectionEyebrow>
-            <h2 className="font-display text-text text-[clamp(2rem,4.6vw,3.4rem)] mt-4 leading-[1.05] tracking-[-0.025em]">
+            <h2 className="h-section mt-4">
               Drei Wege <em className="font-display-italic text-accent">zu uns.</em>
             </h2>
             <ul className="mt-10 space-y-0.5 text-[15.5px]">
@@ -129,7 +129,7 @@ export default function AusserHausPage() {
             <p className="mt-4 font-display-italic text-text text-[2rem] md:text-[2.2rem] leading-[1.1]">
               Samstags zwischen 15 und 18 Uhr - oder nach Absprache.
             </p>
-            <p className="mt-6 text-text-2 text-[15.5px] leading-relaxed">
+            <p className="mt-6 body-base">
               Eine Aufwärmanleitung legen wir jeder Bestellung bei. Wer länger im
               Voraus plant, kann auch Festmenüs für Weihnachten, Silvester oder
               Familienfeiern bei uns bestellen.
