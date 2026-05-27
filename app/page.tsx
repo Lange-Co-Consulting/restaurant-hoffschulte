@@ -165,7 +165,7 @@ export default function HomePage() {
               <em className="font-display-italic">Josef Hoffschulte</em>. Heute in
               sechster Generation geführt von{" "}
               <em className="font-display-italic text-accent-deep">Carsten Hoffschulte</em>.
-              Frische Küche, eigene Jagd, eigene Wurst.
+              Frische Küche, eigene Jagd.
             </p>
             <div className="mt-8">
               <CtaButton href="/ueber-uns" variant="ghost">Unsere Geschichte</CtaButton>
