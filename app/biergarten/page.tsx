@@ -34,36 +34,6 @@ export default function BiergartenPage() {
         objectPosition="center 65%"
       />
 
-      {/* CINEMATIC BAND — Abendstimmung */}
-      <section className="relative">
-        <div className="relative h-[78vh] min-h-[520px] w-full overflow-hidden vignette">
-          <Image
-            src="/photos/biergarten-abend.jpg"
-            alt="Biergarten am Abend - leere Tische unter den Platanen, warmes Licht der späten Sonne"
-            fill
-            sizes="100vw"
-            quality={92}
-            className="object-cover object-[center_45%]"
-          />
-
-          {/* sanfter Top-Fade zur vorherigen Sektion */}
-          <div aria-hidden className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-bg/55 to-transparent" />
-
-          {/* Caption unten links — editorial, ruhig */}
-          <div className="absolute bottom-7 left-6 md:bottom-12 md:left-12 z-10 max-w-xs">
-            <div className="inline-flex items-center gap-3">
-              <span aria-hidden className="h-px w-7 bg-bg/90" />
-              <span className="eyebrow text-bg/95 text-[0.66rem] font-semibold">
-                Abendstimmung · Spätsommer
-              </span>
-            </div>
-            <p className="mt-4 font-display-italic text-bg text-[clamp(1.4rem,2.6vw,2rem)] leading-[1.15] tracking-[-0.015em] drop-shadow-[0_2px_18px_rgba(0,0,0,0.4)]">
-              Wenn die Sonne durchs Blätterdach geht.
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* RESERVATION NOTE */}
       <section className="section-y">
         <div className="container-x grid md:grid-cols-[1.3fr_1fr] gap-10 md:gap-16">
@@ -122,6 +92,36 @@ export default function BiergartenPage() {
             Dazu Weine aus unserer Karte, Aperitifs, Kaffee aus der Münsteraner Rösterei,
             sowie alkoholfreie Alternativen. Sprechen Sie uns an, wir empfehlen gern.
           </p>
+        </div>
+      </section>
+
+      {/* CINEMATIC CLOSER — Abendstimmung */}
+      <section className="relative">
+        <div className="relative h-[80vh] min-h-[540px] w-full overflow-hidden vignette">
+          <Image
+            src="/photos/biergarten-abend.jpg"
+            alt="Biergarten am Abend - leere Tische unter den Platanen, warmes Licht der späten Sonne"
+            fill
+            sizes="100vw"
+            quality={92}
+            className="object-cover object-[center_45%]"
+          />
+
+          {/* sanfter Top-Fade zur vorherigen Sektion */}
+          <div aria-hidden className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-bg/55 to-transparent" />
+
+          {/* Caption unten links — editorial, ruhig */}
+          <div className="absolute bottom-7 left-6 md:bottom-12 md:left-12 z-10 max-w-xs">
+            <div className="inline-flex items-center gap-3">
+              <span aria-hidden className="h-px w-7 bg-bg/90" />
+              <span className="eyebrow text-bg/95 text-[0.66rem] font-semibold">
+                Abendstimmung · Spätsommer
+              </span>
+            </div>
+            <p className="mt-4 font-display-italic text-bg text-[clamp(1.4rem,2.6vw,2rem)] leading-[1.15] tracking-[-0.015em] drop-shadow-[0_2px_18px_rgba(0,0,0,0.4)]">
+              Wenn die Sonne durchs Blätterdach geht.
+            </p>
+          </div>
         </div>
       </section>
     </>
