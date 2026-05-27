@@ -27,20 +27,40 @@ export default function BiergartenPage() {
         number="Kapitel 02"
         title={<>Unter neunzig Jahre alten <em className="font-display-italic text-accent-deep">Platanen.</em></>}
         intro="Nehmen Sie Platz unter unseren ca. 90 Jahre alten Platanen. Für ein ideales Blätterdach werden diese alle drei bis vier Jahre zurückgeschnitten. Im Sommer ein grüner Saal, ohne Wände."
-        image="/photos/biergarten-classic-1.jpg"
-        imageAlt="Biergarten unter Platanen - Tische auf Kies, Sonnenlicht durch das Blätterdach"
+        image="/photos/biergarten-hero.jpg"
+        imageAlt="Biergarten unter Platanen - rotgrüne Klappstühle, karierte Tischdecken, Fachwerk im Hintergrund"
+        imageOpacity={0.62}
+        fade="soft"
+        objectPosition="center 65%"
       />
 
-      {/* CINEMATIC BAND */}
+      {/* CINEMATIC BAND — Abendstimmung */}
       <section className="relative">
-        <div className="relative h-[70vh] min-h-[480px] w-full overflow-hidden vignette">
+        <div className="relative h-[78vh] min-h-[520px] w-full overflow-hidden vignette">
           <Image
-            src="/photos/biergarten-classic-2.jpg"
-            alt="Biergarten - Außenansicht des Restaurants, Fachwerk, Sandsteinbogen"
+            src="/photos/biergarten-abend.jpg"
+            alt="Biergarten am Abend - leere Tische unter den Platanen, warmes Licht der späten Sonne"
             fill
             sizes="100vw"
-            className="object-cover"
+            quality={92}
+            className="object-cover object-[center_45%]"
           />
+
+          {/* sanfter Top-Fade zur vorherigen Sektion */}
+          <div aria-hidden className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-bg/55 to-transparent" />
+
+          {/* Caption unten links — editorial, ruhig */}
+          <div className="absolute bottom-7 left-6 md:bottom-12 md:left-12 z-10 max-w-xs">
+            <div className="inline-flex items-center gap-3">
+              <span aria-hidden className="h-px w-7 bg-bg/90" />
+              <span className="eyebrow text-bg/95 text-[0.66rem] font-semibold">
+                Abendstimmung · Spätsommer
+              </span>
+            </div>
+            <p className="mt-4 font-display-italic text-bg text-[clamp(1.4rem,2.6vw,2rem)] leading-[1.15] tracking-[-0.015em] drop-shadow-[0_2px_18px_rgba(0,0,0,0.4)]">
+              Wenn die Sonne durchs Blätterdach geht.
+            </p>
+          </div>
         </div>
       </section>
 

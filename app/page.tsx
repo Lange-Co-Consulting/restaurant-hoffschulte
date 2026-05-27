@@ -77,7 +77,7 @@ export default function HomePage() {
       <section className="relative min-h-[100dvh] flex flex-col overflow-hidden">
         <div aria-hidden className="absolute inset-0">
           <Image
-            src="/photos/biergarten-classic-2.jpg"
+            src="/photos/biergarten-hero.jpg"
             alt=""
             fill
             priority
@@ -85,10 +85,10 @@ export default function HomePage() {
             sizes="100vw"
             className="object-cover object-center"
           />
-          {/* Stärkerer Bottom-Fade — alles unter Mitte sichtbar abgedunkelt zur surface */}
-          <div className="absolute inset-x-0 bottom-0 h-[82%] bg-gradient-to-b from-transparent via-bg/78 to-bg" />
-          {/* Links-Fade — Text-Spalte sitzt auf nahezu solidem Hintergrund */}
-          <div className="absolute inset-y-0 left-0 w-[62%] bg-gradient-to-r from-bg/88 via-bg/55 to-transparent" />
+          {/* Bottom-Fade — sanfter, damit das Bild bis tief unten lesbar bleibt */}
+          <div className="absolute inset-x-0 bottom-0 h-[78%] bg-gradient-to-b from-transparent via-bg/45 to-bg/95" />
+          {/* Links-Fade — Text-Spalte ruht auf weichem Verlauf, das Bild bleibt präsent */}
+          <div className="absolute inset-y-0 left-0 w-[62%] bg-gradient-to-r from-bg/72 via-bg/32 to-transparent" />
         </div>
 
         <div className="relative flex-1 flex flex-col justify-end pt-28 md:pt-32 pb-12 md:pb-16">

@@ -9,6 +9,9 @@ export function PageHero({
   intro,
   image,
   imageAlt,
+  imageOpacity = 0.22,
+  fade = "default",
+  objectPosition = "center",
 }: {
   eyebrow: string;
   number?: string;
@@ -16,7 +19,18 @@ export function PageHero({
   intro?: string;
   image: string;
   imageAlt: string;
+  imageOpacity?: number;
+  fade?: "default" | "soft";
+  objectPosition?: string;
 }) {
+  const verticalOverlay =
+    fade === "soft"
+      ? "absolute inset-0 bg-gradient-to-b from-bg/55 via-bg/30 to-bg/92"
+      : "absolute inset-0 bg-gradient-to-b from-bg/85 via-bg/65 to-bg";
+  const sideOverlay =
+    fade === "soft"
+      ? "absolute inset-y-0 left-0 w-[55%] bg-gradient-to-r from-bg/85 via-bg/40 to-transparent"
+      : "absolute inset-y-0 left-0 w-[55%] bg-gradient-to-r from-bg to-transparent";
   return (
     <section className="relative pt-32 md:pt-44 pb-14 md:pb-24 overflow-hidden">
       <div aria-hidden className="absolute inset-0 pointer-events-none">
@@ -26,11 +40,12 @@ export function PageHero({
           fill
           sizes="100vw"
           quality={90}
-          className="object-cover object-center opacity-[0.22]"
+          style={{ opacity: imageOpacity, objectPosition }}
+          className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-bg/85 via-bg/65 to-bg" />
-        <div className="absolute inset-y-0 left-0 w-[55%] bg-gradient-to-r from-bg to-transparent" />
+        <div className={verticalOverlay} />
+        <div className={sideOverlay} />
       </div>
 
       <div className="relative container-x grid md:grid-cols-[1.4fr_1fr] gap-10 md:gap-16 items-end">
