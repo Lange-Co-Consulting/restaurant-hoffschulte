@@ -33,8 +33,8 @@ const principles = [
   {
     n: "04",
     label: "Hausgemacht",
-    title: "Wurst, Sülzen, Pasteten - Rezepte über Generationen.",
-    body: "Westfälische Spezialitäten entstehen in unserer Küche. So wie früher, so wie immer.",
+    title: "Suppen, Saucen, Desserts - aus eigener Küche.",
+    body: "Vom Fond bis zum Nachtisch - in unserer Küche entsteht alles selbst. So wie früher, so wie immer.",
   },
 ];
 

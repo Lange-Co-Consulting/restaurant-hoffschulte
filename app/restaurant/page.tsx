@@ -19,7 +19,7 @@ const principles = [
   { n: "01", label: "Regional", title: "Was im Münsterland wächst, kommt zuerst.", body: "Wir kaufen bei Erzeugern, die wir kennen. Kurze Wege, volle Aromen, keine Geheimnisse." },
   { n: "02", label: "Saisonal", title: "Die Karte folgt dem Kalender.", body: "Spargel im Mai, Pfifferlinge im Juli, Wild im Herbst, Gänse zur Adventszeit." },
   { n: "03", label: "Selbst erlegt", title: "Wild aus eigener Jagd.", body: "Carsten Hoffschulte ist seit 1994 Jäger. Reh, Hirsch, Hase, Wildschwein - waidgerecht." },
-  { n: "04", label: "Hausgemacht", title: "Wurst, Pasteten, Sülzen - Rezepte über Generationen.", body: "Westfälische Spezialitäten aus eigener Herstellung. So wie früher. So wie immer." },
+  { n: "04", label: "Hausgemacht", title: "Suppen, Saucen, Desserts - aus eigener Küche.", body: "Vom Fond bis zum Nachtisch - in unserer Küche entsteht alles selbst. So wie früher. So wie immer." },
 ];
 
 const stations = [
