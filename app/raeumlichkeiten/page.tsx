@@ -19,8 +19,8 @@ const rooms = [
     name: "Fachwerkstube",
     capacity: "bis 50 Personen",
     body: "Der historische Hauptraum mit freigelegtem Fachwerk, Backsteinbogen und großer Fensterfront zum Garten. Geeignet für Geburtstage, Empfänge und Firmenessen.",
-    image: "/photos/raum-fachwerkstube.jpg",
-    imageAlt: "Fachwerkstube mit gedeckter langer Tafel, grünen Stühlen, Backsteinbogen und großer Fensterfront",
+    image: "/photos/fachwerkstube-festtafel.jpg",
+    imageAlt: "Fachwerkstube festlich gedeckt - lange Tafel mit weißen Stoffservietten, Weinkühlern und Gemälden an den freigelegten Fachwerkwänden",
   },
   {
     nr: "02",

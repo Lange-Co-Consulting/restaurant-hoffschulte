@@ -41,24 +41,24 @@ export default function RestaurantPage() {
         number="Kapitel 01"
         title={<>Frische in <em className="font-display-italic text-accent-deep">alten Mauern.</em></>}
         intro="In unseren jahrhundertealten, hellen Räumlichkeiten bieten wir eine zeitgemäße, saisonale Küche mit frischen, vorwiegend regionalen Produkten. Frischer Fisch oder selbst erlegtes Wild gehören genauso dazu wie westfälische Spezialitäten aus eigener Herstellung."
-        image="/photos/raum-kaminraum.jpg"
-        imageAlt="Der Kaminraum mit Kupfertheke und historischem Inventar"
+        image="/photos/restaurant-vorne.jpg"
+        imageAlt="Der Gastraum mit Wagenrad-Leuchter, Sprossenfenstern und offenem Herdfeuer"
       />
 
-      {/* INTERIOR IMAGE */}
+      {/* INTERIOR IMAGE — Blick in den Gastraum */}
       <section className="relative">
-        <div className="relative w-full aspect-[16/8] md:aspect-[16/6] overflow-hidden">
+        <div className="relative w-full aspect-[16/9] md:aspect-[16/7] overflow-hidden">
           <Image
-            src="/photos/raum-kaminraum.jpg"
-            alt="Der Kaminraum mit Kupfertheke, Holzbalken und gedeckten Tafeln"
+            src="/photos/restaurant-vorne.jpg"
+            alt="Der Gastraum mit Wagenrad-Leuchter, Sprossenfenstern, freiliegenden Holzbalken und offenem Herdfeuer im Hintergrund"
             fill
             quality={92}
             sizes="100vw"
-            className="object-cover"
+            className="object-cover object-[center_55%]"
           />
         </div>
         <p className="container-x mt-4 text-muted text-[13px]">
-          Der Kaminraum mit Kupfertheke und historischem Inventar.
+          Wagenrad-Leuchter, freiliegende Balken, der alte Herd - so warm wie früher.
         </p>
       </section>
 
@@ -82,6 +82,36 @@ export default function RestaurantPage() {
               </StaggerItem>
             ))}
           </StaggerGroup>
+        </div>
+      </section>
+
+      {/* HERDFEUER — atmospheric */}
+      <section className="section-y">
+        <div className="container-x grid md:grid-cols-2 gap-10 md:gap-16 items-center">
+          <Reveal className="relative aspect-[3/4] md:aspect-[4/5] overflow-hidden bg-bg-3 vignette">
+            <Image
+              src="/photos/herdfeuer.jpg"
+              alt="Offenes Herdfeuer im Kaminraum, Flammen hinter schwarzem Eisen, Birkenholzstapel und Zinnplatten auf dem Sims, präparierter Iltis als Erinnerung an die Jagd"
+              fill
+              quality={92}
+              sizes="(min-width: 768px) 50vw, 100vw"
+              className="object-cover"
+            />
+          </Reveal>
+          <Reveal delay={0.1}>
+            <SectionEyebrow accent>Im Kaminraum</SectionEyebrow>
+            <h2 className="h-display mt-4">
+              Das <em className="font-display-italic text-accent-deep">Herdfeuer.</em>
+            </h2>
+            <p className="mt-6 body-lead max-w-md">
+              Vom ersten Frost bis zum Frühjahr brennt es offen. Der Geruch von Birke,
+              das Knistern hinter dem Gespräch, Reflexe an schwarzem Eisen - der Raum
+              wird wärmer, je länger der Abend dauert.
+            </p>
+            <p className="mt-5 text-muted text-[14px] font-display-italic max-w-md">
+              Über dem Sims: Zinnplatten, Iltis und Hermelin - Erinnerungen aus dem Revier.
+            </p>
+          </Reveal>
         </div>
       </section>
 

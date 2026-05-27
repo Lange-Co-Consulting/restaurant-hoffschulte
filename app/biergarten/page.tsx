@@ -69,6 +69,33 @@ export default function BiergartenPage() {
         </div>
       </section>
 
+      {/* REH AM ZAUN — Nachbarschaft zum Revier */}
+      <section className="section-y border-t border-[color:var(--line)]">
+        <div className="container-x grid md:grid-cols-2 gap-10 md:gap-16 items-center">
+          <Reveal delay={0.1} className="relative aspect-[4/5] md:aspect-[3/4] overflow-hidden bg-bg-3 vignette md:order-2">
+            <Image
+              src="/photos/biergarten-reh.jpg"
+              alt="Blick vom Biergarten in den angrenzenden Garten - ein Reh steht hinter dem Zaun zwischen Rosen und Wiese, im Vordergrund Platanenblätter und ein gedeckter Tisch"
+              fill
+              quality={92}
+              sizes="(min-width: 768px) 50vw, 100vw"
+              className="object-cover object-[center_45%]"
+            />
+          </Reveal>
+          <Reveal className="md:order-1">
+            <SectionEyebrow accent>Vom Revier</SectionEyebrow>
+            <h2 className="h-display mt-4">
+              Das Reh <em className="font-display-italic text-accent-deep">am Zaun.</em>
+            </h2>
+            <p className="mt-6 body-lead max-w-md">
+              Hinter dem Biergarten beginnt das Revier. Bei stillem Wetter steht das
+              Reh zwischen Rosen und Wiese, neugierig wie wir - eine ehrliche
+              Erinnerung daran, woher das Wild auf der Karte kommt.
+            </p>
+          </Reveal>
+        </div>
+      </section>
+
       {/* BEERS */}
       <section className="section-y bg-bg-2/30 border-y border-[color:var(--line)]">
         <div className="container-x">
